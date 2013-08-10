@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.0.0
+env:
+  - DB=postgres
+
+before_script:
+  - "cp config/database.ci.yml config/database.yml"
+  - "bundle exec rake db:drop"
+  - "RAILS_ENV=test bundle exec rake db:drop"
+  - "RAILS_ENV=test bundle exec rake db:create"
+  - "RAILS_ENV=test bundle exec rake db:schema:load"
+script: "RAILS_ENV=test bundle exec rake spec"

@@ -1,0 +1,9 @@
+development: 
+  adapter: postgresql
+  database: davetoxa_development
+  username: postgres
+
+test: 
+  adapter: postgresql
+  database: davetoxa_test
+  username: postgres

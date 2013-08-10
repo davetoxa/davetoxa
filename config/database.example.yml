@@ -1,0 +1,19 @@
+setup: &setup
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: 
+  encoding: unicode
+  min_messages: WARNING
+
+development:
+  <<: *setup
+  database: davetoxa_development
+
+production:
+  <<: *setup
+  database: davetoxa_production
+
+test:
+  <<: *setup
+  database: davetoxa_test

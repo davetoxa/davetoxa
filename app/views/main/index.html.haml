@@ -1,0 +1,20 @@
+.center.hero-unit
+  %h1 Всем всем привет!
+  %h3
+    %p.text-success
+      Скоро, здесь будет интересная серия статей,
+      %br
+      в которой будет описан процесс разработки и тестирования
+      %br
+      блога для новичков на Ruby on Rails.
+    %hr
+    %p.text-warning
+      Параллельно со статьями будут публиковаться ссылки
+      %br
+      на создание такого же функционала на Laravel.
+      %br
+      Вы увидите разницу в реализации между Laravel и RoR.
+
+  %h3
+    = link_to 'План создания', plan_path
+  = link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'

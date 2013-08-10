@@ -1,0 +1,8 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to 'Блог на Ruby on Rails', root_path, id: 'logo'
+      %nav
+        %ul.nav.pull-right
+          %li= link_to 'Главная', root_path
+          %li= link_to 'План', plan_path
