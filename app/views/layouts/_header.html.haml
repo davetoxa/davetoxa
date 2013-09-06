@@ -1,8 +1,14 @@
 %header.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to 'Блог на Ruby on Rails', root_path, id: 'logo'
+      = link_to t('.title'), root_path, id: 'logo'
       %nav
         %ul.nav.pull-right
-          %li= link_to 'Главная', root_path
-          %li= link_to 'План', plan_path
+          %li= link_to t('.main'), root_path
+          %li= link_to t('.plan'), plan_path
+          - if can? :manage, :all
+            %li= link_to t('.subscribers'), subscribes_path
+          -if user_signed_in?
+            %li=link_to current_user.email, edit_user_registration_path
+          - else
+            %li=link_to t('.login'), new_user_session_path

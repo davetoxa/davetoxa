@@ -1,18 +1,16 @@
 source 'https://rubygems.org'
-
 gem 'rails', '4.0.0'
 gem 'pg'
-  
-gem 'bcrypt-ruby', '3.0.1'
+
+gem 'cancan'
 gem 'devise'
-gem 'devise-i18n'
-gem 'faker'
+gem 'responders'
+gem 'rails_config'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
-
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
@@ -21,6 +19,7 @@ end
 gem 'haml'
 gem 'sass-rails'
 gem 'bootstrap-sass'
+gem 'simple_form'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
@@ -34,4 +33,3 @@ gem 'unicorn'
 group :doc do
   gem 'sdoc'
 end
-

@@ -1,0 +1,35 @@
+$grey: #999999;
+
+.intro{
+  color: $grey;
+  font-size: 1.9em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+.password{
+  color: $grey;
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+.email.optional{
+  color: $grey;
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+input.optional{
+  width: 480px;
+  height: 40px;
+  text-align: center;
+}
+input.string.email{
+  color: $grey;
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+span.help-inline{
+  margin-top: 20px;
+  display: none;
+}

@@ -1,0 +1,20 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+ru:
+  devise:
+    failure:
+      already_authenticated: Вы уже вошли в систему.
+      invalid: "Секретные слова не подходят."
+      invalid_token: "Неверный ключ аутентификации."
+      not_found_in_database: "Секретные слова не подходят."
+      timeout: "Ваш сеанс закончился. Пожалуйста, войдите в систему снова."
+      unauthenticated: "Вам необходимо войти в систему или зарегистрироваться."
+    omniauth_callbacks:
+      failure: "Вы не можете войти в систему с учётной записью из %{kind}б так как \"%{reason}\"."
+      success: "Вход в систему выполнен с учётной записью из %{kind}."
+    registrations:
+      destroyed: "До свидания! Ваша учётная запись удалена. Надеемся снова увидеть вас."
+      signed_up: "Добро пожаловать! Вы успешно зарегестрировались."
+      updated: Ваш профиль успешно обновлён.
+    sessions:
+      signed_in: "Вход в систему выполнен."
+      signed_out: "Выход из системы выполнен."

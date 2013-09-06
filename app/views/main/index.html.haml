@@ -1,20 +1,22 @@
 .center.hero-unit
-  %h1 Всем всем привет!
+  %h1= t '.hello'
   %h3
     %p.text-success
-      Скоро, здесь будет интересная серия статей,
+      =t '.text_part1'
       %br
-      в которой будет описан процесс разработки и тестирования
-      %br
-      блога для новичков на Ruby on Rails.
-    %hr
-    %p.text-warning
-      Параллельно со статьями будут публиковаться ссылки
-      %br
-      на создание такого же функционала на Laravel.
-      %br
-      Вы увидите разницу в реализации между Laravel и RoR.
-
-  %h3
-    = link_to 'План создания', plan_path
-  = link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'
+      =t '.text_part2'
+      =t '.text_part3'
+  = link_to t('.plan'), plan_path, class: 'btn btn-info btn-large'
+  %br
+  %br
+  = link_to t('.subscribe'), new_subscribes_path, class: 'btn btn-success btn-large'
+  %br
+  %br
+  = link_to (image_tag 'https://travis-ci.org/davetoxa/davetoxa.png?branch=master'), 'https://github.com/davetoxa/davetoxa'
+  %br
+  = link_to (image_tag 'https://gemnasium.com/davetoxa/davetoxa.png'), 'https://gemnasium.com/davetoxa/davetoxa', target: '_blank'
+  %br
+  = image_tag('rails.png', alt: 'Rails')
+  .author
+    = link_to 'Anton Cherepanov', 'https://twitter.com/davetoxa', target: '_blank'
+    #{Date.today.year}

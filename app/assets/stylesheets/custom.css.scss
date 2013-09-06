@@ -6,6 +6,9 @@ html {
 
 body {
   padding-top:60px;
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 section {
@@ -59,28 +62,5 @@ p {
   line-height: 1;
   &:hover {
     color: #aaf;
-    text-decoration: none;
-  }
-}
-
-footer {
-  margin-top: 45px;
-  paddong-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: $grayLight;
-  a {
-    color: #555;
-    &:hover {
-      color: #222;
-    }
-  }
-  ul {
-    float: right;
-    margin-right: 50px;
-    list-style: none;
-    li{
-      float: left;
-      margin-left: 10px;
-    }
   }
 }

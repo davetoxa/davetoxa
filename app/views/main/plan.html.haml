@@ -1,6 +1,6 @@
 .hero-unit
   %h2
-    %p.text-info{style: 'margin-top: -40px'} План разработки RoR / Laravel Блога
+    %p.text-info{style: 'margin-top: -40px'}= t('.title')
   %h5
     %ol
       %li Пару слов о технологии и что необходимо для начала
@@ -19,7 +19,7 @@
       %li Добавление соц. кнопок к постам
       %li Добавление поиска для блога
   %h3
-    Вопросы?
+    = t('.questions')
     = mail_to('davetoxa@gmail.com')
   %br
   = render partial: "shared/disqus"

@@ -1,0 +1,33 @@
+ru:
+  devise:
+    registrations:
+      edit:
+        back: Назад
+        destroy_account: Удалить мой аккаунт
+        exit: Выход
+      new:
+        denied: Запрещена
+        title: Регистрация
+  layouts:
+    header:
+      login: Войти
+      main: Главная
+      plan: План
+      subscribers: Подписчики
+      title: Блог на Ruby on Rails
+  main:
+    index:
+      hello: Всем всем привет!
+      plan: План создания
+      subscribe: Подписаться на обновления
+      text_part1: Скоро, здесь будет интересная серия статей,
+      text_part2: в которой будет описан процесс разработки и тестирования
+      text_part3: блога для новичков на Ruby on Rails.
+    plan:
+      questions: Вопросы?
+      title: План разработки блога
+  subscribes:
+    new:
+      wanna_update: Хотите подписаться на обновления ?
+    show:
+      title: Подписчики
