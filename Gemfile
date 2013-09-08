@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 gem 'rails', '4.0.0'
-gem 'russian'
 gem 'pg'
 
+gem 'russian'
 gem 'cancan'
 gem 'devise'
 gem 'responders'
