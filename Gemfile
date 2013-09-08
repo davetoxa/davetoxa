@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '4.0.0'
+gem 'russian'
 gem 'pg'
 
 gem 'cancan'
@@ -8,6 +9,7 @@ gem 'responders'
 gem 'rails_config'
 
 group :development, :test do
+  gem 'faker'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
