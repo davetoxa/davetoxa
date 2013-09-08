@@ -29,5 +29,5 @@ ru:
   subscribes:
     new:
       wanna_update: Хотите подписаться на обновления ?
-    show:
+    index:
       title: Подписчики
