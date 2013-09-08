@@ -1,0 +1,9 @@
+= simple_form_for @post do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :content
+  .form-actions
+    = f.button :submit, class: 'btn btn-success'
+    = link_to t('.back'), :back, class: 'btn btn-inverse'

@@ -13,6 +13,7 @@ ru:
       login: Войти
       main: Главная
       plan: План
+      posts: Посты
       subscribers: Подписчики
       title: Rails - это просто | Блог о RoR
   main:
@@ -26,6 +27,18 @@ ru:
     plan:
       questions: Вопросы?
       title: План разработки блога
+  posts:
+    edit:
+      title: Обновление публикации
+    form:
+      back: Назад
+    index:
+      new: Создать публикацию
+      title: Публикации
+    new:
+      title: Создание публикации
+    post:
+      update: Обновить
   subscribes:
     new:
       wanna_update: Хотите подписаться на обновления ?

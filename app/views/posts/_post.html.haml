@@ -1,0 +1,10 @@
+%table.table.table-striped
+  %tr
+    %th.span1= t('.title')
+    %th.span1= t('.content')
+    %th.span1
+  %tr
+    %td= post.title
+    %td= post.content
+    - if can? :create, Post
+      %td= link_to t('.update'), edit_post_path(post), class: 'btn btn-warning'

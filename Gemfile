@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'pg'
+gem 'thin'
 
 gem 'russian'
 gem 'cancan'
 gem 'devise'
+gem 'redcarpet'
 gem 'responders'
 gem 'rails_config'
 

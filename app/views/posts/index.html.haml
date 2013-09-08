@@ -1,0 +1,5 @@
+%h2= t('.title')
+
+= render @posts
+- if can? :create, Post
+  = link_to t('.new'), new_post_path, class: 'btn btn-primary'
