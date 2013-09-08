@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe SubscribesController do
-  let!(:subscribe){ create :subscribe }
+
   describe 'GET #show' do
+    let(:subscribe){ create :subscribe }
+    login
     it 'должен содержать подписку' do
-      #get :show
-      #assigns(:subscribes).should include(subscribe)
+      #get :index
+      #expect(assigns :subscribes).to include(subscribe)
     end
   end
   describe 'GET #new' do

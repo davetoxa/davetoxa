@@ -1,11 +1,10 @@
 class SubscribesController < ApplicationController
   respond_to :html
-  responders :flash
 
   before_filter :load_subscriber, only: :create
   load_and_authorize_resource
 
-  def show
+  def index
     @subscribes = @subscribes.page(params[:page]).per_page(10)
   end
 

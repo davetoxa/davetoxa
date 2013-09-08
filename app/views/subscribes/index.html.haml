@@ -1,1 +1,9 @@
-= render @subscribers
+%h2= t('.title') #  #{@subscribes.size}
+- @subscribes.each do |s|
+  = s.email
+  - if can? :destroy, Subscribe
+    = link_to '', '', class: 'icon-remove'
+  %hr
+= will_paginate @subscribes, previous_label: 'Туда', next_label: 'Сюда'
+
+= link_to t('main.index.subscribe'), new_subscribe_path, class: 'btn btn-success btn'
