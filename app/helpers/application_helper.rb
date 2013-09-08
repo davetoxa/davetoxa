@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title)
-    base_title = 'davetoxa.info'
+    base_title = 'Rails - это просто | davetoxa.info'
     if page_title.empty?
       base_title
     else

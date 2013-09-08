@@ -14,7 +14,7 @@ ru:
       main: Главная
       plan: План
       subscribers: Подписчики
-      title: Блог на Ruby on Rails
+      title: Rails - это просто | Блог о RoR
   main:
     index:
       hello: Всем всем привет!
