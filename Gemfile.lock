@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/KODerFunk/ultimate-base.git
+  revision: f6e1d74c95947495601d310c16ae90d2d8b2c7bd
+  specs:
+    ultimate-base (0.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,7 +97,7 @@ GEM
     mime-types (1.25)
     mini_portile (0.5.1)
     minitest (4.7.5)
-    multi_json (1.7.9)
+    multi_json (1.8.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -161,6 +167,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    state_machine (1.2.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -214,9 +221,11 @@ DEPENDENCIES
   russian
   sass-rails
   sdoc
-  simple_form
+  simple_form (~> 3.0.0.rc)
+  state_machine
   thin
   turbolinks
   uglifier
+  ultimate-base!
   unicorn
   will_paginate

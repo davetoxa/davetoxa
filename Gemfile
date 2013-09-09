@@ -8,6 +8,7 @@ gem 'cancan'
 gem 'devise'
 gem 'redcarpet'
 gem 'responders'
+gem 'state_machine'
 gem 'rails_config'
 
 group :development, :test do
@@ -23,12 +24,13 @@ end
 gem 'haml'
 gem 'sass-rails'
 gem 'bootstrap-sass'
-gem 'simple_form'
+gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'jbuilder'
