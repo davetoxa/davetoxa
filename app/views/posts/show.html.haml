@@ -1,6 +1,8 @@
 %h1= @post.title
 = markdown @post.content
-
+.created_at
+  = l @post.created_at, format: :short
+%hr
 = link_to t('.back'), :back, class: 'btn btn-primary'
 - if can? :manage, Post
   = link_to t('.edit'), edit_post_path, class: 'btn btn-info'

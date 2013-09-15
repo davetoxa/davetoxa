@@ -1,3 +1,5 @@
 %h2= link_to post.title, post
 = markdown(post.content)
+.created_at
+  = l post.created_at, format: :short
 %hr

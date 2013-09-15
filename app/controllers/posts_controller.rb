@@ -19,8 +19,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    p @post.errors unless @post.save 
-    respond_with @post, location: root_path
+    @post.user_id = current_user.id
+    @post.save
+    respond_with @post, location: posts_path
   end
 
   def update
