@@ -1,13 +1,22 @@
 ru:
+  confirm: Вы уверены ?
   devise:
     registrations:
       edit:
         back: Назад
         destroy_account: Удалить мой аккаунт
         exit: Выход
+        title: Редактирование моего профиля
       new:
         denied: Запрещена
         title: Регистрация
+  helpers:
+    submit:
+      subscribe:
+        create: Подписаться на обновления
+      user:
+        create: Войти
+        update: Обновить свои данные
   layouts:
     header:
       login: Войти
@@ -39,8 +48,22 @@ ru:
       title: Создание публикации
     post:
       update: Обновить
+  simple_form:
+    labels:
+      subscribe:
+        email: Ваш email
+      user:
+        current_password: Для изменений введите второе секретное слово
+        edit:
+          password: Введите  шифр
+          password_confirmation: Повторите шифр
+        email: Секретное слово
+        password: Второе секретное слово
   subscribes:
     new:
       wanna_update: Хотите подписаться на обновления ?
     index:
       title: Подписчики
+  will_paginate:
+    previous_label: "&#8592; Туда"
+    next_label: "Сюда &#8594;"

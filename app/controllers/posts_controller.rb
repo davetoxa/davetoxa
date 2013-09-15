@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post.save
+    p @post.errors unless @post.save 
     respond_with @post, location: root_path
   end
 

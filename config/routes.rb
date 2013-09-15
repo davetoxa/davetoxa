@@ -5,7 +5,6 @@ Davetoxa::Application.routes.draw do
   resources :subscribes, except: [:edit, :show]
   resources :posts
 
-  get '/help',   to: 'main#help'
   get '/plan',   to: 'main#plan'
 
 end

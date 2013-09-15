@@ -2,7 +2,7 @@
 .login
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .form-inputs{style:'text-align:center'}
-    = f.input :email, required: false, autofocus: true, label: 'Секретное слово'
-    = f.input :password, required: false, label: 'Второе секретное слово'
+    = f.input :email, required: false, autofocus: true
+    = f.input :password, required: false
     - f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-    = f.button :submit, 'Войти', class: 'btn btn-large btn-block btn-primary btn-info'
+    = f.button :submit, class: 'btn btn-large btn-block btn-primary btn-info'

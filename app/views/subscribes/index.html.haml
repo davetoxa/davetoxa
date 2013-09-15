@@ -4,6 +4,6 @@
   - if can? :destroy, Subscribe
     = link_to '', '', class: 'icon-remove'
   %hr
-= will_paginate @subscribes, previous_label: 'Туда', next_label: 'Сюда'
+= will_paginate @subscribes
 
 = link_to t('main.index.subscribe'), new_subscribe_path, class: 'btn btn-success btn'
