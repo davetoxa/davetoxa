@@ -1,8 +1,8 @@
 class Ability
   include CanCan::Ability
-
-  def initialize(user)
-    user ||= User.new
+  attr_reader :user
+  def initialize(current_user)
+    @user = current_user || User.new
     everybody_abilities
     admin_abilities if user.admin?
   end

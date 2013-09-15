@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :title
-    = f.input :content
+    = f.input :content, as: :ckeditor
   .form-actions
     = f.button :submit, class: 'btn btn-success'
     = link_to t('.back'), :back, class: 'btn btn-inverse'

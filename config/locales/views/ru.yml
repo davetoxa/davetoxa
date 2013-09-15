@@ -12,6 +12,8 @@ ru:
         title: Регистрация
   helpers:
     submit:
+      post:
+        create: Добавить запись
       subscribe:
         create: Подписаться на обновления
       user:
@@ -49,6 +51,8 @@ ru:
     post:
       update: Обновить
   simple_form:
+    error_notification:
+      default_message: Что-то не так
     labels:
       subscribe:
         email: Ваш email
@@ -59,6 +63,9 @@ ru:
           password_confirmation: Повторите шифр
         email: Секретное слово
         password: Второе секретное слово
+      post:
+        title: Заголовок публикации
+        content: Содержание
   subscribes:
     new:
       wanna_update: Хотите подписаться на обновления ?
