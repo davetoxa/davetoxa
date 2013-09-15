@@ -1,5 +1,7 @@
-%h2= t('.title')
+%h1= t('.title')
 
 = render @posts
+= will_paginate @subscribes
+
 - if can? :create, Post
   = link_to t('.new'), new_post_path, class: 'btn btn-primary'

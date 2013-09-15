@@ -8,6 +8,5 @@ class CreatePosts < ActiveRecord::Migration
       t.timestamps
     end
     add_index :posts, :title
-    add_index :posts, :user_id, unique: true
   end
 end

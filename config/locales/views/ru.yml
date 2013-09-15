@@ -13,7 +13,8 @@ ru:
   helpers:
     submit:
       post:
-        create: Добавить запись
+        create: Добавить публикацию
+        update: Обновить публикацию
       subscribe:
         create: Подписаться на обновления
       user:
@@ -43,6 +44,7 @@ ru:
       title: Обновление публикации
     form:
       back: Назад
+      destroy: Удалить публикацию
     index:
       new: Создать публикацию
       title: Публикации
@@ -50,6 +52,10 @@ ru:
       title: Создание публикации
     post:
       update: Обновить
+    show:
+      back: Назад
+      edit: Редактировать
+      destroy: Удалить
   simple_form:
     error_notification:
       default_message: Что-то не так

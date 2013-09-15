@@ -16,7 +16,8 @@ section {
 }
 
 textarea {
-  resize: vertical;
+  width: 640px;
+  height: 180px;
 }
 
 .center {
@@ -34,7 +35,6 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 h2 {
@@ -62,4 +62,7 @@ p {
   &:hover {
     color: #aaf;
   }
+}
+.markdown_hints ul {
+  list-style-type: none;
 }

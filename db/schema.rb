@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20130908200246) do
   end
 
   add_index "posts", ["title"], name: "index_posts_on_title", using: :btree
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", unique: true, using: :btree
 
   create_table "subscribes", force: true do |t|
     t.string   "email",                     null: false

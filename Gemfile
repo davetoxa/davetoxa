@@ -3,7 +3,6 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'thin'
 
-gem 'ckeditor'
 gem 'russian'
 gem 'cancan'
 gem 'devise'

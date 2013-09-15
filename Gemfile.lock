@@ -52,9 +52,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    ckeditor (4.0.6)
-      mime-types
-      orm_adapter
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -207,7 +204,6 @@ DEPENDENCIES
   cancan
   capistrano
   capybara
-  ckeditor
   coffee-rails
   database_cleaner
   devise

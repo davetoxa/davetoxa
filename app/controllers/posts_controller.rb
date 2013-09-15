@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    respond_with @post, location: subscribes_path
+    respond_with @post, location: posts_path
   end
 
   private

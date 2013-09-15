@@ -3,7 +3,10 @@
 
   .form-inputs
     = f.input :title
-    = f.input :content, as: :ckeditor
+    = f.input :content
   .form-actions
     = f.button :submit, class: 'btn btn-success'
     = link_to t('.back'), :back, class: 'btn btn-inverse'
+    = link_to t('.destroy'), post_path(@post), method: :delete, class: 'btn btn-danger' if @post.id
+    %hr
+    = render partial: 'shared/markdown_hints'

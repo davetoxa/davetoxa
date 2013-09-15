@@ -1,4 +1,7 @@
-%h2= @post.title
-%h5= @post.content
+%h1= @post.title
+= markdown @post.content
 
 = link_to t('.back'), :back, class: 'btn btn-primary'
+- if can? :manage, Post
+  = link_to t('.edit'), edit_post_path, class: 'btn btn-info'
+  = link_to t('.destroy'), post_path(@post), method: :delete, class: 'btn btn-danger'
