@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908200246) do
+ActiveRecord::Schema.define(version: 20130920204928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20130908200246) do
 
   add_index "posts", ["title"], name: "index_posts_on_title", using: :btree
 
+  create_table "posts_tags", id: false, force: true do |t|
+    t.integer "post_id", null: false
+    t.integer "tag_id",  null: false
+  end
+
+  add_index "posts_tags", ["post_id"], name: "index_posts_tags_on_post_id", using: :btree
+  add_index "posts_tags", ["tag_id", "post_id"], name: "index_posts_tags_on_tag_id_and_post_id", unique: true, using: :btree
+  add_index "posts_tags", ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
+
   create_table "subscribes", force: true do |t|
     t.string   "email",                     null: false
     t.boolean  "active",     default: true
@@ -35,6 +44,12 @@ ActiveRecord::Schema.define(version: 20130908200246) do
   end
 
   add_index "subscribes", ["email"], name: "index_subscribes_on_email", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "title",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",               default: "",    null: false
