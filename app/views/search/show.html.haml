@@ -1,0 +1,9 @@
+%h1
+  Вы искали:
+  = @search
+- if @result.empty?
+  %h2= t('.not_found')
+- else
+  %h2= t('.found')
+  - @result.each do |result|
+    .alert-success-links= link_to result.title, result

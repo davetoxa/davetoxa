@@ -4,6 +4,7 @@ Davetoxa::Application.routes.draw do
   devise_for :users, only: [:sessions, :registrations]
   resources :subscribes, except: [:edit, :show]
   resources :posts
+  resource :search, only: :show, controller: :search
 
   get '/plan',   to: 'main#plan'
 

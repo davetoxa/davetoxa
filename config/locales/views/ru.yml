@@ -23,7 +23,6 @@ ru:
   layouts:
     header:
       login: Войти
-      main: Главная
       plan: План
       posts: Публикации
       subscribers: Подписчики
@@ -56,6 +55,7 @@ ru:
       back: Назад
       edit: Редактировать
       destroy: Удалить
+  psearch: Поиск по публикациям
   simple_form:
     error_notification:
       default_message: Что-то не так
@@ -72,6 +72,10 @@ ru:
       post:
         title: Заголовок публикации
         content: Содержание
+  search:
+    show:
+      found: На нижеследующих страницах вы можете найти искомую фразу
+      not_found: К сожалению ничего нет
   subscribes:
     new:
       wanna_update: Хотите подписаться на обновления ?
