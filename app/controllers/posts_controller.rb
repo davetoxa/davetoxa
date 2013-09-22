@@ -19,8 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post.user_id = current_user.id
-    @post.save
+    @post = current_user.posts.create(recourse_params)
     respond_with @post, location: posts_path
   end
 

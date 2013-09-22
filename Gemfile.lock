@@ -78,6 +78,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
+    foreigner (1.4.1)
+      activerecord (>= 3.0.0)
     haml (4.0.3)
       tilt
     highline (1.6.19)
@@ -211,6 +213,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  foreigner
   haml
   jbuilder
   jquery-rails

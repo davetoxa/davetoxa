@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20130920204928) do
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["title"], name: "index_posts_on_title", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "posts_tags", id: false, force: true do |t|
     t.integer "post_id", null: false
@@ -61,5 +61,7 @@ ActiveRecord::Schema.define(version: 20130920204928) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+
+  add_foreign_key "posts", "users", :name => "posts_user_id_fk"
 
 end
