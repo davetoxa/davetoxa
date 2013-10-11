@@ -8,8 +8,10 @@ ru:
         exit: Выход
         title: Редактирование моего профиля
       new:
-        denied: Запрещена
-        title: Регистрация
+        title: Ничего тут нет =(
+    sessions:
+      new:
+        login: Войти
   helpers:
     submit:
       post:
@@ -65,8 +67,8 @@ ru:
       user:
         current_password: Для изменений введите второе секретное слово
         edit:
-          password: Введите  шифр
-          password_confirmation: Повторите шифр
+          name: Введите вваше имя
+          info: Введите информацию о себе
         email: Секретное слово
         password: Второе секретное слово
       post:

@@ -13,7 +13,8 @@
     .container
       = render 'layouts/flash'
       - if user_signed_in?
-        .user-link= link_to current_user.email, edit_user_registration_path
+        .user-link
+          = link_to (image_tag current_user.gravatar, class: 'avatar'), edit_user_registration_path
       = yield
       .user
     = render 'layouts/footer'

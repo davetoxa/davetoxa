@@ -52,16 +52,19 @@ ActiveRecord::Schema.define(version: 20130920204928) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",               default: "",    null: false
-    t.string   "encrypted_password",  default: "",    null: false
-    t.datetime "remember_created_at"
-    t.boolean  "admin",               default: false
+    t.string   "email",      null: false
+    t.string   "username",   null: false
+    t.string   "name"
+    t.string   "info"
+    t.string   "uid",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  add_foreign_key "posts", "users", :name => "posts_user_id_fk"
+  add_foreign_key "posts", "users", name: "posts_user_id_fk"
 
 end

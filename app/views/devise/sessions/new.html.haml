@@ -1,8 +1,2 @@
-%hr
-.login
-= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .form-inputs{style:'text-align:center'}
-    = f.input :email, required: false
-    = f.input :password, required: false
-    - f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-    = f.button :submit, class: 'btn btn-large btn-block btn-primary btn-info'
+- unless user_signed_in?
+  =link_to t('.login'), user_omniauth_authorize_path(:github), class: 'btn btn-large btn-block btn-primary btn-info'
