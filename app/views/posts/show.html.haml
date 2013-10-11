@@ -1,5 +1,5 @@
 %h1= @post.title
-= markdown @post.content
+= emojify(markdown @post.content)
 .created_at
   = l @post.created_at, format: :short
 %hr

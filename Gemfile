@@ -13,6 +13,7 @@ gem 'redcarpet'
 gem 'responders'
 gem 'state_machine'
 gem 'rails_config'
+gem 'gemoji'
 
 group :development, :test do
   gem 'faker'
@@ -37,7 +38,7 @@ gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'capistrano'
+gem 'capistrano',  '~> 2.x.x'
 gem 'unicorn'
 group :doc do
   gem 'sdoc'

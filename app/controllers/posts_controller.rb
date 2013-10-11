@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @posts = @posts.page(params[:page]).per_page(10)
+    @posts = @posts.order(created_at: :desc).page(params[:page]).per_page(10)
   end
 
   def show

@@ -1,5 +1,5 @@
-%h2= link_to post.title, post
-= markdown(post.content)
+%h1= link_to post.title, post
+= emojify(markdown post.content)
 .created_at
   = l post.created_at, format: :short
 %hr
