@@ -10,7 +10,7 @@
 }
 .author {
   position: absolute;
-  margin: -10px 0 0 670px;
+  margin: -10px 0 0 645px;
   color: #aaa
 }
 .user-link {
@@ -23,11 +23,10 @@
 }
 .plan {
   .list {
-    margin-left: 15px;
-    font-size: 1.3em;
-    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 25px;
     li{
-      margin: 10px;
+      line-height: 1.7em;
     }
   }
 }

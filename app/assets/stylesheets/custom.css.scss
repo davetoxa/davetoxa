@@ -12,6 +12,7 @@ body {
   a:hover {
     text-decoration: none;
   }
+  font-family: Verdana;
 }
 
 section {
@@ -38,6 +39,7 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
+  font-family: Arial;
 }
 
 h2 {
@@ -47,7 +49,9 @@ h2 {
   text-align: normal;
   color: $grayLight;
 }
-
+h3{
+  font-family: Arial;
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
