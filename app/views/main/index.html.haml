@@ -1,21 +1,23 @@
-.center.hero-unit
+.index.center
   %h1= t '.hello'
   %h3
     %p
       =t '.text_part1'
       %br
       =t '.text_part2'
+      %br
       =t '.text_part3'
-  = link_to t('.plan'), plan_path, class: 'btn btn-info btn-large'
-  %br
-  %br
+      %br
+        = image_tag('rails.png', alt: 'Rails')
   = link_to t('.subscribe'), new_subscribe_path, class: 'btn btn-success btn-large'
   %br
   %br
   = link_to (image_tag 'https://travis-ci.org/davetoxa/davetoxa.png?branch=master'), 'https://github.com/davetoxa/davetoxa'
   = link_to (image_tag 'https://codeclimate.com/github/davetoxa/davetoxa.png'), 'https://codeclimate.com/github/davetoxa/davetoxa'
   %br
-  = image_tag('rails.png', alt: 'Rails')
+  %br
+  .github
+    %iframe{allowtransparency: "true", frameborder: "0", src: "http://ghbtns.com/github-btn.html?user=davetoxa&repo=davetoxa&type=watch&size=large"}
   .author
     = link_to 'Anton Cherepanov', 'https://twitter.com/davetoxa', target: '_blank'
     #{Date.today.year}

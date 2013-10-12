@@ -10,8 +10,11 @@
 }
 .author {
   position: absolute;
-  margin: -10px 0 0 645px;
+  margin: -10px 0 0 760px;
   color: #aaa
+}
+.github{
+  margin-left: 200px;
 }
 .user-link {
   position: absolute;
@@ -29,4 +32,7 @@
       line-height: 1.7em;
     }
   }
+}
+.index{
+  margin-top: 35px;
 }
