@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable, omniauth_providers: [:github]
   validates :email, :username, :uid, uniqueness: true
 
-  has_many :posts
+  has_many :posts, dependent: :nullify
 
   def admin?
     username? && Rails.application.config.admins.include?(username)

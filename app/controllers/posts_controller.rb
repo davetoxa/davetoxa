@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post.user = current_user if @post.user.nil?
     @post.update(recourse_params)
     respond_with @post, location: @post
   end
