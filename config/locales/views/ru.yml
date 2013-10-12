@@ -23,23 +23,25 @@ ru:
         create: Войти
         update: Обновить свои данные
   layouts:
+    application:
+      title: Rails - A Simple Approach | davetoxa.info
     header:
       login: Войти
       plan: План
       posts: Публикации
       subscribers: Подписчики
-      title: Rails - это просто | Блог о RoR
+      title: Rails - A Simple Approach
   main:
     index:
-      hello: Всем всем привет!
-      plan: План создания
+      hello: Всем всем привет !
+      plan: План разработки
       subscribe: Подписаться на обновления
       text_part1: Скоро, здесь будет интересная серия статей,
       text_part2: в которой будет описан процесс разработки и тестирования
       text_part3: блога для новичков на Ruby on Rails.
     plan:
       questions: Вопросы?
-      title: План разработки блога
+      title: План разработки
   posts:
     edit:
       title: Обновление публикации
@@ -66,26 +68,26 @@ ru:
       user:
         current_password: Для изменений введите второе секретное слово
         edit:
-          name: Введите вваше имя
           info: Введите информацию о себе
+          name: Введите ваше имя
         email: Секретное слово
         password: Второе секретное слово
       post:
-        title: Заголовок публикации
         content: Содержание
+        title: Заголовок публикации
   search:
     show:
       found: На нижеследующих страницах вы можете найти искомую фразу
       not_found: К сожалению ничего нет
       title: Вы искали -
   subscribes:
-    new:
-      wanna_update: Хотите подписаться на обновления ?
     index:
       title: Подписчики
+    new:
+      wanna_update: Хотите подписаться на обновления ?
   time:
     formats:
       short: "%d-%m-%Y в %k:%M"
   will_paginate:
-    previous_label: "&#8592; Туда"
     next_label: "Сюда &#8594;"
+    previous_label: "&#8592; Туда"

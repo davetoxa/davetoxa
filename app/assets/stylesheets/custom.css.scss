@@ -1,11 +1,14 @@
+@import "bootswatch/journal/variables";
+@import "bootstrap-responsive";
 @import 'bootstrap';
+@import "bootswatch/journal/bootswatch";
 
 html {
   overflow-y: scroll;
 }
 
 body {
-  padding-top:60px;
+  padding-top: 80px;
   a:hover {
     text-decoration: none;
   }
@@ -27,7 +30,7 @@ textarea {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   line-height: 1;
 }
 
@@ -52,17 +55,19 @@ p {
 
 #logo {
   float: left;
-  font-size: 1.7em;
-  color: #aaa;
-  text-transform: uppercase;
+  font-size: 2em;
+  color: $black;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 12px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: #aaf;
+    color: $grayDark;
   }
 }
-.markdown_hints ul {
-  list-style-type: none;
+.hero-unit{
+  border-radius: 5px;
+}
+.search-query{
+  width: 135px;
 }

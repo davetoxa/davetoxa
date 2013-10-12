@@ -1,32 +1,33 @@
-.alerts{
+.alerts {
   text-align: center;
   font-size: 1.5em;
   letter-spacing: -1px;
 }
-.user{
-  margin-top: 70px;
-  float:right
-}
-.user-link{
-  margin: 10px;
-  float:right
-}
-.avatar{
-  border-radius: 50%;
-}
-
-.author{
-  position: absolute;
-  margin: 15px 0 0 640px;
-  color: #aaa
-}
-.plan.list{
-  margin-left: 15px;
-  font-size: 1.1em;
-  padding-bottom: 20px;
-}
-.alert-success-links{
+.alert-success-links {
   padding: 30px;
   padding-top: 0px;
   font-size: 1.5em;
+}
+.author {
+  position: absolute;
+  margin: -10px 0 0 670px;
+  color: #aaa
+}
+.user-link {
+  position: absolute;
+  margin-left: 830px;
+  margin-top: 10px;
+  .avatar {
+    border-radius: 50%;
+  }
+}
+.plan {
+  .list {
+    margin-left: 15px;
+    font-size: 1.3em;
+    padding-bottom: 20px;
+    li{
+      margin: 10px;
+    }
+  }
 }

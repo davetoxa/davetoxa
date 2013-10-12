@@ -1,16 +1,13 @@
 $grey: #999999;
 
-.intro{
-  color: $grey;
-  font-size: 1.9em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+input.optional{
+  width: 480px;
+  height: 40px;
+  text-align: center;
 }
-.password{
-  color: $grey;
-  font-size: 1.4em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+span.help-inline{
+  position: absolute;
+  margin: 50px 200px 0 0;
 }
 .email.optional{
   color: $grey;
@@ -18,18 +15,12 @@ $grey: #999999;
   letter-spacing: -1px;
   margin-bottom: 30px;
 }
-input.optional{
-  width: 480px;
-  height: 40px;
-  text-align: center;
-}
-input.string.email{
+.intro{
   color: $grey;
-  font-size: 1.4em;
+  font-size: 1.9em;
   letter-spacing: -1px;
   margin-bottom: 30px;
 }
-span.help-inline{
-  margin-top: 20px;
-  display: none;
+.subscribe{
+  margin-top: 80px;
 }

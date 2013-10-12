@@ -1,4 +1,4 @@
-%h2= t('.title') #  #{@subscribes.size}
+%h1= t('.title') #  #{@subscribes.size}
 - @subscribes.each do |s|
   = s.email
   - if can? :destroy, Subscribe

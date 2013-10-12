@@ -28,6 +28,7 @@ end
 gem 'haml'
 gem 'sass-rails'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
