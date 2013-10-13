@@ -15,7 +15,7 @@
       = render 'layouts/flash'
       - if user_signed_in?
         .user-link
-          = link_to (image_tag current_user.gravatar, class: 'avatar'), edit_user_registration_path
+          = link_to (image_tag gravatar(current_user.email), class: 'avatar'), edit_user_registration_path
       = yield
     = render 'layouts/footer'
     = render 'layouts/counter'

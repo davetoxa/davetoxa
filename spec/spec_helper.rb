@@ -15,8 +15,5 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = true
 
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
-
+  config.after(:each) { DatabaseCleaner.clean }
 end

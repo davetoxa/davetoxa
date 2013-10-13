@@ -17,9 +17,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def gravatar(size = 100)
-    "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}?size=#{size}"
-  end
+  protected
+  # This two methods were overwritten for devise compability
 
   def encrypted_password
     nil
