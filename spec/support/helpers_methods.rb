@@ -1,18 +1,11 @@
-def auth(user = FactoryGirl.create(:user))
-  visit root_path
-
+def auth(user)
   OmniAuth.config.mock_auth[:github] = {
-    "provider" => "github",
-    "uid"      => user.account_github.github_id,
+    "uid"      => user.uid,
     "info"     => {
       "nickname" => user.username,
-      "email"    => user.profile.email,
+      "email"    => user.email,
       "name"     => user.name,
-    },
-    "credentials" => {
-      "token" => user.account_github.token
-    },
+    }
   }
-
-  click_link 'Login'
+  visit user_omniauth_authorize_path(:github)
 end
