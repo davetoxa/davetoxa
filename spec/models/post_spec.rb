@@ -5,12 +5,12 @@ describe Post do
   let(:post) { create(:post, user: user) }
 
   describe 'validation' do
-    it 'Не создаёт пост без заголовка'  do
+    it 'dont create post without title'  do
       post.title = ''
       expect(post).not_to be_valid
     end
 
-    it 'Не создаёт пост без содержания' do
+    it 'dont create post without content' do
       post.content = ''
       expect(post).not_to be_valid
     end

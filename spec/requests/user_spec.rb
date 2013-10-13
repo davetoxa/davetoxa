@@ -5,6 +5,6 @@ describe 'User' do
   let!(:user){ create :user }
 
   describe 'Guest' do
-    it 'входит в приложение'
+    it 'login'
   end
 end

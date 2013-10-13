@@ -11,5 +11,5 @@ require 'spec_helper'
 #   end
 # end
 describe PostHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "add some tests for emojify"
 end

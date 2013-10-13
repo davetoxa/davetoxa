@@ -8,10 +8,6 @@ describe 'Main' do
       expect(page).to have_link I18n.t('main.index.subscribe')
     end
 
-    it 'has plan link' do
-      expect(page).to have_link I18n.t('main.index.plan')
-    end
-
     it 'has welcome text intro' do
       expect(page).to have_content I18n.t('main.index.hello')
       expect(page).to have_content I18n.t('main.index.text_part1')
