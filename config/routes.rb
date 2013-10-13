@@ -6,8 +6,10 @@ Davetoxa::Application.routes.draw do
 
   resources :subscribes, except: [:edit, :show]
   resources :posts
+  resources :users, only: :index
   resource :search, only: :show, controller: :search
 
   get '/plan',   to: 'main#plan'
+  get '/admin',   to: 'main#admin'
 
 end

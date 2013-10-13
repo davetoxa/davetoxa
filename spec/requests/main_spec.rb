@@ -26,6 +26,17 @@ describe 'Main' do
     it 'has plan intro' do
       expect(page).to have_content I18n.t('main.plan.title')
     end
-
   end
+
+  describe 'main#admin' do
+    let!(:user){ create :user }
+    before(:each) do
+      auth user
+      visit admin_path
+    end
+    it 'show accesss denied for usual user' do
+      expect(page).to have_content 'Access denied'
+    end
+  end
+
 end

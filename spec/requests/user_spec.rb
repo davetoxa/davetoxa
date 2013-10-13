@@ -21,7 +21,7 @@ describe 'User' do
       let!(:admin){ create :admin }
       before {auth admin}
       it 'login and has admin link' do
-        expect(page).to have_content I18n.t('layouts.header.subscribers')
+        expect(page).to have_content I18n.t('layouts.header.admin')
       end
     end
 end

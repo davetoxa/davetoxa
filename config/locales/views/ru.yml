@@ -1,4 +1,5 @@
 ru:
+
   confirm: Вы уверены ?
   devise:
     registrations:
@@ -29,9 +30,13 @@ ru:
       login: Войти
       plan: План
       posts: Публикации
-      subscribers: Подписчики
+      admin: Админка
       title: Rails - A Simple Approach
   main:
+    admin:
+      title: Админ панель
+      users_link: Список пользователей
+      subscribes_link: Подписки на сайт
     index:
       hello: Всем всем привет !
       subscribe: Подписаться на обновления
@@ -87,6 +92,9 @@ ru:
   time:
     formats:
       short: "%d-%m-%Y в %k:%M"
+  users:
+    index:
+      title: Список пользователей
   will_paginate:
     next_label: "Сюда &#8594;"
     previous_label: "&#8592; Туда"
