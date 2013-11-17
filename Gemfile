@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 gem 'pg'
 gem 'foreigner'
 gem 'thin'
@@ -14,6 +14,7 @@ gem 'responders'
 gem 'state_machine'
 gem 'rails_config'
 gem 'gemoji'
+gem 'closure_tree'
 
 group :development, :test do
   gem 'faker'
