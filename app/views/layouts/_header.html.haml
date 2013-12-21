@@ -4,7 +4,6 @@
       = link_to t('.title'), root_path, id: 'logo'
       %nav
         %ul.nav.pull-right
-          %li= link_to t('.plan'), plan_path
           %li= link_to t('.posts'), posts_path
           - if can? :manage, :all
             %li= link_to t('.admin'), admin_path

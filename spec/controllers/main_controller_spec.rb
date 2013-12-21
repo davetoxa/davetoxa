@@ -7,12 +7,5 @@ describe MainController do
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
-
-    it 'plan responds with HTTP 200 status code' do
-      get :plan
-      expect(response).to be_success
-      expect(response.status).to eq(200)
-    end
-
   end
 end

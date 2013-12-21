@@ -1,0 +1,99 @@
+en:
+  confirm: Are you shure ?
+  devise:
+    registrations:
+      edit:
+        back: Back
+        destroy_account: Destroy my account
+        exit: Exit
+        title: Update my profile
+      new:
+        title: There is nothing =(
+    sessions:
+      new:
+        login: Login
+  flash:
+    actions:
+      create:
+        notice: You have successfully subscribed
+  helpers:
+    submit:
+      post:
+        create: Add post
+        update: Update post
+      subscribe:
+        create: Subscribe me for posts update
+      user:
+        create: Login
+        update: Update my profile
+  layouts:
+    application:
+      title: Rails - A Simple Approach | davetoxa.info
+    header:
+      login: Login
+      plan: Plan
+      posts: Posts
+      admin: Admin
+      title: Rails - A Simple Approach
+  main:
+    admin:
+      title: Admin dashboard
+      users_link: User list
+      subscribes_link: Subscribes
+    index:
+      hello: '<< Hello, dear friend >>'
+      subscribe: Subscribe me for posts update
+      text_part1: This is an education blog project
+      text_part2: build with Ruby on Rails.
+  posts:
+    edit:
+      title: Updating post
+    form:
+      back: Back
+      destroy: Destroy post
+    index:
+      new: Create post
+    new:
+      title: Creating post
+    post:
+      update: Update
+    show:
+      back: Back
+      edit: Edit
+      destroy: Destroy
+  psearch: Search by posts
+  simple_form:
+    error_notification:
+      default_message: Something went wrong
+    labels:
+      subscribe:
+        email: Please enter your email
+      user:
+        current_password: Enter the password again
+        edit:
+          info: Information
+          name: Your name
+        email: Email
+        password: Password
+      post:
+        content: Body
+        title: Title
+  search:
+    show:
+      found: On the following pages you can find the search phrase
+      not_found: Unfortunately we did not find anything
+      title: You're searching -
+  subscribes:
+    index:
+      title: Subscribes
+    new:
+      wanna_update: Are you want to subscribe ?
+  time:
+    formats:
+      short: "%d.%m.%Y %k:%M"
+  users:
+    index:
+      title: Users
+  will_paginate:
+    next_label: "Here &#8594;"
+    previous_label: "&#8592; There"

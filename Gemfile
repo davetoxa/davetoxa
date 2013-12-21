@@ -38,7 +38,6 @@ gem 'bootstrap-will_paginate'
 
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'jbuilder'

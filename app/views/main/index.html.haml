@@ -1,12 +1,10 @@
 .index.center
   %h1= t '.hello'
-  %h3
+  %h1
     %p
       =t '.text_part1'
       %br
       =t '.text_part2'
-      %br
-      =t '.text_part3'
       %br
         = image_tag('rails.png', alt: 'Rails')
   = link_to t('.subscribe'), new_subscribe_path, class: 'btn btn-success btn-large'

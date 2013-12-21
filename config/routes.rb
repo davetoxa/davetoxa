@@ -9,7 +9,6 @@ Davetoxa::Application.routes.draw do
   resources :users, only: :index
   resource :search, only: :show, controller: :search
 
-  get '/plan',   to: 'main#plan'
   get '/admin',   to: 'main#admin'
 
 end

@@ -1,5 +1,4 @@
 ru:
-
   confirm: Вы уверены ?
   devise:
     registrations:
@@ -13,6 +12,10 @@ ru:
     sessions:
       new:
         login: Войти
+  flash:
+    actions:
+      create:
+        notice: Вы успешно подписались
   helpers:
     submit:
       post:

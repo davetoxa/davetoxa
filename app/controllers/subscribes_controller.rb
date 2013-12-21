@@ -12,7 +12,7 @@ class SubscribesController < ApplicationController
   end
 
   def create
-    flash[:notice] = 'Вы успешно подписались' if @subscribe.save
+    flash[:notice] = 'You have successfully subscribed' if @subscribe.save
     respond_with @subscribe, location: root_path
   end
 

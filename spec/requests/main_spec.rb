@@ -12,19 +12,10 @@ describe 'Main' do
       expect(page).to have_content I18n.t('main.index.hello')
       expect(page).to have_content I18n.t('main.index.text_part1')
       expect(page).to have_content I18n.t('main.index.text_part2')
-      expect(page).to have_content I18n.t('main.index.text_part3')
     end
 
     it 'has author name link' do
       expect(page).to have_link 'Anton Cherepanov'
-    end
-  end
-
-  describe 'main#plan' do
-    before(:each) { visit '/plan' }
-
-    it 'has plan intro' do
-      expect(page).to have_content I18n.t('main.plan.title')
     end
   end
 

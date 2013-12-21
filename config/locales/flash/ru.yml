@@ -1,6 +1,0 @@
-# Lookup rules: https://github.com/plataformatec/responders#flashresponder
-ru:
-  flash:
-    actions:
-      create:
-        notice: 'Вы успешно подписались'
