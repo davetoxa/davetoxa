@@ -40,11 +40,6 @@ en:
       title: Admin dashboard
       users_link: User list
       subscribes_link: Subscribes
-    index:
-      hello: '<< Hello, dear friend >>'
-      subscribe: Subscribe me for posts update
-      text_part1: This is an education blog project
-      text_part2: build with Ruby on Rails.
   posts:
     edit:
       title: Updating post
@@ -90,7 +85,7 @@ en:
       wanna_update: Are you want to subscribe ?
   time:
     formats:
-      short: "%d.%m.%Y %k:%M"
+      short: "%d-%b-%Y %k:%M"
   users:
     index:
       title: Users

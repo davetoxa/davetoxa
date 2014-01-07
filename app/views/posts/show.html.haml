@@ -1,6 +1,6 @@
 = render @post
-= link_to t('.back'), :back, class: 'btn btn-primary'
+%button.pure-button.pure-button-back= link_to t('.back'), :back, class: 'btn btn-primary'
 
 - if can? :manage, Post
-  = link_to t('.edit'), edit_post_path, class: 'btn btn-info'
-  = link_to t('.destroy'), post_path(@post), method: :delete, class: 'btn btn-danger'
+  %button.pure-button.pure-button-secondary= link_to t('.edit'), edit_post_path, class: 'btn btn-info'
+  %button.pure-button.pure-button-error= link_to t('.destroy'), post_path(@post), method: :delete, class: 'btn btn-danger'

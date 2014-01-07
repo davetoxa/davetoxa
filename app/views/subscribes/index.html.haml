@@ -1,4 +1,4 @@
-%h1= t('.title') #  #{@subscribes.size}
+%h1= t('.title')
 - @subscribes.each do |s|
   = s.email
   - if can? :destroy, Subscribe
@@ -6,4 +6,4 @@
   %hr
 = will_paginate @subscribes
 
-= link_to t('main.index.subscribe'), new_subscribe_path, class: 'btn btn-success btn'
+%button.pure-button.pure-button-success= link_to t('main.index.subscribe'), new_subscribe_path, class: 'btn btn-success btn'

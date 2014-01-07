@@ -1,41 +1,11 @@
-.admin{
-  margin-top: 35px;
-}
-.alerts {
+.alert {
   text-align: center;
   font-size: 1.5em;
   letter-spacing: -1px;
+  opacity: 0.6;
+  width: 80%;
 }
-.alert-success-links {
-  padding: 30px;
-  padding-top: 0px;
-  font-size: 1.5em;
-}
-.author {
-  position: absolute;
-  margin: -10px 0 0 760px;
-  color: #aaa
-}
-.github{
-  margin-left: 200px;
-}
-.user-link {
-  position: absolute;
-  margin-left: 830px;
-  margin-top: 10px;
-  .avatar {
-    border-radius: 50%;
-  }
-}
-.plan {
-  .list {
-    margin-left: 10px;
-    margin-bottom: 25px;
-    li{
-      line-height: 1.7em;
-    }
-  }
-}
-.index{
-  margin-top: 35px;
+.alert.alert-error{
+  color: red;
+
 }

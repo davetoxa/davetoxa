@@ -1,5 +1,12 @@
-%h1= link_to post.title, post
-= emojify(markdown post.content)
-.created_at
-  = l post.created_at, format: :short
-%hr
+%section.post
+  %header.post-header
+    %h2.post-title= link_to post.title, post
+  .post-description
+    %p
+      = emojify(markdown post.content)
+      .created_at
+        = l post.created_at, format: :short
+      %p.post-meta
+        -#%a.post-category.post-category-design{href: "#"} CSS
+        -#%a.post-category.post-category-pure{href: "#"} Ruby
+

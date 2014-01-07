@@ -1,6 +1,6 @@
 Davetoxa::Application.routes.draw do
 
-  root 'main#index'
+  root 'posts#index'
   devise_for :users, only: [:sessions, :registrations, :omniauth_callbacks],
               controllers: {omniauth_callbacks: "omniauth"}
 

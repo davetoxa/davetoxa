@@ -6,7 +6,9 @@
     = #f.input :info
   .form-actions
     = #f.button :submit
-    = link_to t('.destroy_account'), registration_path(resource_name), data: { confirm: t('confirm') }, method: :delete, class: 'btn btn-danger'
+    %br
+    %button.pure-button.pure-button-error= link_to t('.destroy_account'), registration_path(resource_name), data: { confirm: t('confirm') }, method: :delete
     %p
-    = link_to t('.back'), :back, class: 'btn btn-inverse'
-    = link_to t('.exit'), destroy_user_session_path, method: :delete, class: 'btn btn-inverse'
+    %button.pure-button.pure-button-back= link_to t('.back'), :back
+%p
+  %button.pure-button.pure-button-warning= link_to t('.exit'), destroy_user_session_path, method: :delete, class: 'btn btn-inverse'
