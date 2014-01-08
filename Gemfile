@@ -1,20 +1,29 @@
 source 'https://rubygems.org'
-gem 'rails', '~> 4.0.2'
+
+gem 'rails', '>=  4.x.x'
 gem 'pg'
 gem 'foreigner'
 gem 'puma'
-
-gem 'textacular'
-gem 'russian'
 gem 'cancan'
 gem 'devise'
 gem 'omniauth-github'
 gem 'redcarpet'
-gem 'responders'
 gem 'state_machine'
 gem 'rails_config'
 gem 'gemoji'
 gem 'closure_tree'
+gem 'russian'
+
+gem 'haml'
+gem 'sass-rails'
+gem 'simple_form'
+gem 'will_paginate'
+
+gem 'jquery-rails'
+gem 'uglifier'
+gem 'turbolinks'
+gem 'capistrano',  '~> 2.x.x'
+gem 'unicorn'
 
 group :development, :test do
   gem 'faker'
@@ -22,27 +31,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'quiet_assets'
 end
+
 group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'database_cleaner'
-end
-
-gem 'haml'
-gem 'sass-rails'
-gem 'bootstrap-sass'
-gem 'bootswatch-rails'
-gem 'simple_form'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
-
-gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'uglifier'
-gem 'turbolinks'
-gem 'jbuilder'
-gem 'capistrano',  '~> 2.x.x'
-gem 'unicorn'
-group :doc do
-  gem 'sdoc'
 end
