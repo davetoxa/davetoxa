@@ -1,5 +1,11 @@
 en:
   confirm: Are you shure ?
+  controllers:
+    subscribes:
+      subscribe_successful: You have successfully subscribed
+  comments:
+    comment:
+      ago: ago
   devise:
     registrations:
       edit:
@@ -30,6 +36,7 @@ en:
     application:
       title: Rails - A Simple Approach | davetoxa.info
     header:
+      description: Simple blog platform on Ruby on Rails
       login: Login
       plan: Plan
       posts: Posts
@@ -51,6 +58,7 @@ en:
     new:
       title: Creating post
     post:
+      comments: Comments
       update: Update
     show:
       back: Back
@@ -80,6 +88,7 @@ en:
       title: You're searching -
   subscribes:
     index:
+      subscribe: Subscribe
       title: Subscribes
     new:
       wanna_update: Are you want to subscribe ?

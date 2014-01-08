@@ -1,5 +1,11 @@
 ru:
   confirm: Вы уверены ?
+  controllers:
+    subscribes:
+      subscribe_successful: Вы успешно подписались
+  comments:
+    comment:
+      ago: назад
   devise:
     registrations:
       edit:
@@ -30,6 +36,7 @@ ru:
     application:
       title: Rails - A Simple Approach | davetoxa.info
     header:
+      description: Простая блогоплатформа на Ruby on Rails
       login: Войти
       plan: План
       posts: Публикации
@@ -54,6 +61,7 @@ ru:
     new:
       title: Создание публикации
     post:
+      comments: Комментарии
       update: Обновить
     show:
       back: Назад
@@ -83,6 +91,7 @@ ru:
       title: Вы искали -
   subscribes:
     index:
+      subscribe: Подписаться
       title: Подписчики
     new:
       wanna_update: Хотите подписаться на обновления ?

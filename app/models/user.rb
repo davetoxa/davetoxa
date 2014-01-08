@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   validates :email, :username, :uid, uniqueness: true
 
   has_many :posts, dependent: :nullify
-
+  has_many :comments, dependent: :destroy
   def admin?
     username? && Rails.application.config.admins.include?(username)
   end

@@ -14,7 +14,7 @@ describe 'Subscribe' do
       visit new_subscribe_path
       within 'form#new_subscribe' do
         fill_in :email, with: Faker::Internet.email
-        click_button 'Subscribe'
+        click_button I18n.t('helpers.submit.subscribe.create')
       end
       expect(page).to have_content I18n.t('flash.actions.create.notice')
     end

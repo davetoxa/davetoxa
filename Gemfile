@@ -11,7 +11,6 @@ gem 'redcarpet'
 gem 'state_machine'
 gem 'rails_config'
 gem 'gemoji'
-gem 'closure_tree'
 gem 'russian'
 
 gem 'haml'

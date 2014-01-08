@@ -21,6 +21,10 @@ span.help-inline{
   color: red;
   opacity: 0.6;
 }
+.avatar {
+  border-radius: 50%;
+}
+
 #layout {
   padding-left: 25%; /* "left col (nav + list)" width */
   position: relative;
@@ -92,9 +96,6 @@ span.help-inline{
   zoom: 1;
   .user-link {
     margin-top: 10px;
-    .avatar {
-      border-radius: 50%;
-    }
   }
 }
 .nav-item a {

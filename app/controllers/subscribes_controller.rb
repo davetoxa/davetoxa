@@ -12,7 +12,7 @@ class SubscribesController < ApplicationController
   end
 
   def create
-    flash[:notice] = 'You have successfully subscribed' if @subscribe.save
+    flash[:notice] = I18n.t('controllers.subscribes.subscribe_successful') if @subscribe.save
     respond_with @subscribe, location: root_path
   end
 
