@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '>=  4.x.x'
+gem 'rails', '>=  4.1.x'
 gem 'pg'
 gem 'foreigner'
 gem 'puma'
@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'will_paginate'
 
 gem 'jquery-rails'
+gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'capistrano',  '~> 2.x.x'

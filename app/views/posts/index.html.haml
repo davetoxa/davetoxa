@@ -1,5 +1,6 @@
-= render @posts
-= will_paginate @subscribes
+.js-posts
+  = render @posts
+  = will_paginate @subscribes
 
-- if can? :create, Post
-  %button.pure-button.pure-button-secondary= link_to t('.new'), new_post_path
+  - if can? :create, Post
+    %button.pure-button.pure-button-secondary= link_to t('.new'), new_post_path
