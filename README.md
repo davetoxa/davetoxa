@@ -18,5 +18,4 @@ Rails - A Simple Approach
 You should run app at `http://davetoxa.dev/` on the `:80` port to work with GitHub autorization
 
 ## Other
-* Ruby on Rails 4
-
+* Ruby on Rails 4.1
