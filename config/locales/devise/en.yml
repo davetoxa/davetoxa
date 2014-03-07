@@ -9,6 +9,8 @@ ru:
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
     omniauth:
+      user:
+        failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
     registrations:
