@@ -26,6 +26,7 @@ gem 'capistrano',  '~> 2.x.x'
 gem 'unicorn'
 
 group :development, :test do
+  gem 'spring'
   gem 'faker'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
