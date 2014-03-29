@@ -1,7 +1,7 @@
 Rails - A Simple Approach
 ====
 
-[![Build Status](https://travis-ci.org/davetoxa/davetoxa.png?branch=master)](https://travis-ci.org/davetoxa/davetoxa)
+[![Build Status](https://travis-ci.org/davetoxa/davetoxa.svg?branch=master)](https://travis-ci.org/davetoxa/davetoxa)
 [![Code Climate](https://codeclimate.com/github/davetoxa/davetoxa.png)](https://codeclimate.com/github/davetoxa/davetoxa)
 
 ### This is a blog platform [davetoxa.info](http://davetoxa.info) :+1: :smiley:

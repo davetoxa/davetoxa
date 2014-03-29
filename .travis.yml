@@ -9,4 +9,4 @@ before_script:
   - "cp config/database.ci.yml config/database.yml"
   - "RAILS_ENV=test bundle exec rake db:create"
 
-script: "RAILS_ENV=test bundle exec rake spec"
+script: "CODECLIMATE_REPO_TOKEN=643cf6fb8d63bf6ea009c78b90efd8d6ea17964a686cde40d8d71a765870c1ab RAILS_ENV=test bundle exec rake spec"

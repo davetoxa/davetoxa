@@ -30,6 +30,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :test do
