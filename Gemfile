@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '>=  4.1.x'
+gem 'rails', '~>  4.1.x'
 gem 'pg'
 gem 'foreigner'
 gem 'puma'
