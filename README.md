@@ -4,7 +4,7 @@ Rails - A Simple Approach
 [![Build Status](https://travis-ci.org/davetoxa/davetoxa.svg?branch=master)](https://travis-ci.org/davetoxa/davetoxa)
 [![Code Climate](https://codeclimate.com/github/davetoxa/davetoxa.png)](https://codeclimate.com/github/davetoxa/davetoxa)
 
-### This is a blog platform [davetoxa.info](http://davetoxa.info) :+1: :smiley:
+### This is a simple app for educational purposes :+1: :smiley:
 ## Setup
 
 * git clone git@github.com:davetoxa/davetoxa.git
