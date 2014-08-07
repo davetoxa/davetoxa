@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>  4.1.x'
+gem 'rails', '~>  4.1.4'
 gem 'pg'
 gem 'foreigner'
 gem 'puma'
-gem 'cancan'
+gem 'cancancan'
 gem 'devise'
 gem 'omniauth-github'
 gem 'redcarpet'
@@ -22,8 +22,7 @@ gem 'jquery-rails'
 gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'uglifier'
 gem 'turbolinks'
-gem 'capistrano',  '~> 2.x.x'
-gem 'unicorn'
+gem 'capistrano'
 
 group :development, :test do
   gem 'spring'

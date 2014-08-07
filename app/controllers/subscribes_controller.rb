@@ -30,5 +30,4 @@ class SubscribesController < ApplicationController
   def recourse_params
     params.require(:subscribe).permit(:email)
   end
-
 end

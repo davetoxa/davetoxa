@@ -1,0 +1,9 @@
+LineLength:
+  Description: 'Limit lines to 120 characters(default).'
+  Max: 130
+
+StringLiterals:
+  Enabled: false
+
+BracesAroundHashParameters:
+  Enabled: false
