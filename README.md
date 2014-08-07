@@ -16,7 +16,9 @@ Rails - A Simple Approach
 ## Github Authorization
 
 You could run app two different ways to work with GitHub autorization
+
 1. `http://davetoxa.dev/` on the `:80` port
+
 2. `http://localhost:3000`
 
 ## Other
