@@ -27,5 +27,4 @@ class User < ActiveRecord::Base
   def password_required?
     nil
   end
-
 end
