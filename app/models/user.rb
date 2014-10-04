@@ -4,17 +4,18 @@ class User < ActiveRecord::Base
 
   has_many :posts, dependent: :nullify
   has_many :comments, dependent: :destroy
+  
   def admin?
     username? && Rails.application.config.admins.include?(username)
   end
 
   def self.from_omniauth(auth)
-    where(auth.slice :uid).first_or_create do |user|
-      user.email = auth.info.email || ""
-      user.username = auth.info.nickname
-      user.name = auth.info.name
-      user.uid = auth.uid
-    end
+    where(uid: auth.uid).first_or_create(
+      email: auth.info.email || '',
+      username: auth.info.nickname,
+      name: auth.info.name,
+      uid: auth.uid
+    )
   end
 
   protected
