@@ -1,5 +1,5 @@
 LineLength:
-  Description: 'Limit lines to 120 characters(default).'
+  Description: 'Limit lines to 130 characters(default).'
   Max: 130
 
 StringLiterals:

@@ -1,5 +1,4 @@
 = render @post
-%button.pure-button.pure-button-back= link_to t('.back'), posts_path, class: 'btn btn-primary'
 
 - if can? :manage, Post
   %button.pure-button.pure-button-secondary= link_to t('.edit'), edit_post_path, class: 'btn btn-info'

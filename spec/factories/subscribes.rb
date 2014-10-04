@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :subscribe do
-    email Faker::Internet.email
+    sequence(:email){ |u| "subscriber#{u}@gmail.com" }
     active true
   end
 end

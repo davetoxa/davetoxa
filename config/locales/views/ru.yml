@@ -9,7 +9,6 @@ ru:
   devise:
     registrations:
       edit:
-        back: Назад
         destroy_account: Удалить мой аккаунт
         exit: Выход
         title: Редактирование моего профиля
@@ -54,7 +53,6 @@ ru:
     edit:
       title: Обновление публикации
     form:
-      back: Назад
       destroy: Удалить публикацию
     index:
       new: Создать публикацию
@@ -64,7 +62,6 @@ ru:
       comments: Комментарии
       update: Обновить
     show:
-      back: Назад
       edit: Редактировать
       destroy: Удалить
   psearch: Поиск по публикациям

@@ -1,40 +1,33 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~>  4.1.4'
-gem 'pg'
-gem 'foreigner'
-gem 'puma'
 gem 'cancancan'
 gem 'devise'
-gem 'omniauth-github'
-gem 'redcarpet'
-gem 'state_machine'
-gem 'rails_config'
+gem 'foreigner'
 gem 'gemoji'
-gem 'russian'
-
 gem 'haml'
-gem 'sass-rails'
+gem 'jquery-rails'
+gem 'omniauth-github'
+gem 'pg'
+gem 'puma'
+gem 'rails', '~>  4.1.6'
+gem 'rails_config'
+gem 'redcarpet'
+gem 'sass-rails', github: 'rails/sass-rails'
 gem 'simple_form'
+gem 'turbolinks'
+gem 'uglifier'
+gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
 gem 'will_paginate'
 
-gem 'jquery-rails'
-gem 'ultimate-base', github: 'KODerFunk/ultimate-base'
-gem 'uglifier'
-gem 'turbolinks'
-gem 'capistrano'
-
 group :development, :test do
-  gem 'spring'
-  gem 'faker'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'quiet_assets'
   gem 'codeclimate-test-reporter', require: nil
+  gem 'quiet_assets'
+  gem 'spring'
 end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-screenshot'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end

@@ -9,7 +9,6 @@ en:
   devise:
     registrations:
       edit:
-        back: Back
         destroy_account: Destroy my account
         exit: Exit
         title: Update my profile
@@ -51,7 +50,6 @@ en:
     edit:
       title: Updating post
     form:
-      back: Back
       destroy: Destroy post
     index:
       new: Create post
@@ -61,7 +59,6 @@ en:
       comments: Comments
       update: Update
     show:
-      back: Back
       edit: Edit
       destroy: Destroy
   psearch: Search by posts

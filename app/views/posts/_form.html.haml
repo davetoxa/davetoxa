@@ -5,7 +5,6 @@
   %br
   .form-actions
     = f.button :submit, class: 'pure-button pure-button-success'
-    %button.pure-button.pure-button-back= link_to t('.back'), :back, class: 'btn btn-inverse'
     - if @post.id
       %button.pure-button.pure-button-error= link_to t('.destroy'), post_path(@post), method: :delete
     %hr
