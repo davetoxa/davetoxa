@@ -1,6 +1,10 @@
-.comment
-  .image= image_tag gravatar(comment.user.email, 40), class: 'avatar'
-  .body= comment.body
+.comment{id: comment.id}
+  .image
+    = image_tag gravatar(comment.user.email, 40), class: 'avatar'
+  .body
+    = emojify(comment.body)
   .created_at
     = time_ago_in_words comment.created_at
     = t '.ago'
+    - if can? :delete, comment
+      = link_to t('.delete'), [comment.post, comment], method: :delete, remote: true, id: 'comment-destroy'

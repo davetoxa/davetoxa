@@ -1,19 +1,3 @@
-GIT
-  remote: git://github.com/KODerFunk/ultimate-base.git
-  revision: e0224b3c387885c0f70cb29ba8128e45a5f2b371
-  specs:
-    ultimate-base (0.6.2)
-
-GIT
-  remote: git://github.com/rails/sass-rails.git
-  revision: 423178729e7b84addcee78b33891644b1fc1705b
-  specs:
-    sass-rails (5.0.0.beta1)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2)
-      sprockets (~> 2.12)
-      sprockets-rails (>= 2.0, < 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,19 +27,20 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
     cancancan (1.9.2)
-    capybara (2.4.3)
+    capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    codeclimate-test-reporter (0.4.0)
+    codeclimate-test-reporter (0.4.1)
       simplecov (>= 0.7.1, < 1.0.0)
-    coffee-rails (4.0.1)
+    coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
     coffee-script (2.3.0)
@@ -63,20 +48,21 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     database_cleaner (1.3.0)
-    devise (3.3.0)
+    devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
-    execjs (2.2.1)
-    factory_girl (4.4.0)
+    execjs (2.2.2)
+    factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.4.1)
-      factory_girl (~> 4.4.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -93,9 +79,11 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
-    mime-types (2.3)
+    mime-types (2.4.3)
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
@@ -147,13 +135,15 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
-    redcarpet (3.1.2)
-    rspec-core (3.1.4)
+    redcarpet (3.2.0)
+    responders (1.1.1)
+      railties (>= 3.2, < 4.2)
+    rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
-    rspec-expectations (3.1.1)
+    rspec-expectations (3.1.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.1.0)
-    rspec-mocks (3.1.1)
+    rspec-mocks (3.1.3)
       rspec-support (~> 3.1.0)
     rspec-rails (3.1.0)
       actionpack (>= 3.0)
@@ -163,8 +153,13 @@ GEM
       rspec-expectations (~> 3.1.0)
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
-    rspec-support (3.1.0)
-    sass (3.4.5)
+    rspec-support (3.1.2)
+    sass (3.2.19)
+    sass-rails (4.0.3)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
+      sprockets-rails (~> 2.0)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -174,20 +169,18 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     spring (1.1.3)
-    sprockets (2.12.2)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.1.4)
+    sprockets-rails (2.2.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
-      sprockets (~> 2.8)
+      sprockets (>= 2.8, < 4.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.3.0)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
@@ -206,6 +199,7 @@ DEPENDENCIES
   cancancan
   capybara
   codeclimate-test-reporter
+  coffee-rails
   database_cleaner
   devise
   factory_girl_rails
@@ -213,6 +207,7 @@ DEPENDENCIES
   gemoji
   haml
   jquery-rails
+  launchy
   omniauth-github
   pg
   puma
@@ -221,10 +216,8 @@ DEPENDENCIES
   rails_config
   redcarpet
   rspec-rails
-  sass-rails!
+  sass-rails
   simple_form
   spring
-  turbolinks
   uglifier
-  ultimate-base!
   will_paginate

@@ -2,12 +2,15 @@
   padding: 7px 0 7px 0;
   border-bottom: 1px dotted slateblue;
   width: 50%;
-  img{
+
+  .avatar{
     float:left;
-    margin-right: 9px;
+    margin-right: 10px;
   }
   .body{
-    padding-left: 10px;
-    line-height: 40px;
+    line-height: 31px;
+  }
+  #comment-destroy{
+    color: darkgray;
   }
 }

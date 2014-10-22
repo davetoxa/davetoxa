@@ -1,9 +1,12 @@
 ru:
+  create: Добавить
   confirm: Вы уверены ?
   controllers:
     subscribes:
       subscribe_successful: Вы успешно подписались
   comments:
+    form:
+      leave_comment: Оставьте комментарий
     comment:
       ago: назад
   devise:
@@ -33,7 +36,7 @@ ru:
         update: Обновить свои данные
   layouts:
     application:
-      title: Rails - A Simple Approach | davetoxa.info
+      title: Rails - A Simple Approach
     header:
       description: Простая блогоплатформа на Ruby on Rails
       login: Войти
@@ -64,6 +67,7 @@ ru:
     show:
       edit: Редактировать
       destroy: Удалить
+      leave_comment: Авторизуйся и оставь комментарий
   psearch: Поиск по публикациям
   simple_form:
     error_notification:

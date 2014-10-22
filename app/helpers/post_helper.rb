@@ -1,7 +1,7 @@
 module PostHelper
   def emojify(content)
-    h(content).to_str.gsub(/:([a-z0-9\+\-_]+):/) do |match|
-      if Emoji.names.include?($1)
+    h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+      if Emoji.find_by_alias($1)
         image_tag emoji_path($1), alt: $1, class: 'emoji'
       else
         match
