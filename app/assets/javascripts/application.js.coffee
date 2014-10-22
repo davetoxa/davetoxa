@@ -1,14 +1,17 @@
 ###
   = require jquery
   = require jquery_ujs
-  = require turbolinks
-
-  = require ultimate/underscore/underscore
-  = require ultimate/helpers
-  = require app
-
   = require_tree .
 ###
 
 $ ->
-  App.start()
+  $ document
+    .on 'ajax:beforeSend', '#new_comment', (e, xhr, settings) ->
+      return $('#new_comment textarea').val() != ''
+
+    .on 'ajax:success', '#new_comment', (e, data, status, xhr) ->
+      $(this).find('textarea').val('')
+      $(xhr.responseText).appendTo('.comments')
+
+    .on 'ajax:success', '#comment-destroy', (e, data, status, xhr) ->
+      $("##{data.id}").slideUp()

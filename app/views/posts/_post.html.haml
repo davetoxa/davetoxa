@@ -6,11 +6,6 @@
       = emojify(markdown post.content)
       .created_at
         = l post.created_at, format: :short
-      .comments
-        %b= t '.comments' if post.comments.any?
-        - post.comments.desc.each do |comment|
-          = render comment
       %p.post-meta
         -#%a.post-category.post-category-design{href: "#"} CSS
         -#%a.post-category.post-category-pure{href: "#"} Ruby
-

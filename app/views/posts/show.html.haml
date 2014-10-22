@@ -1,5 +1,13 @@
 = render @post
 
+.comments
+  = render @post.comments
+%br
+- if can? :create, Comment
+  = render 'comments/form'
+- else
+  = t '.leave_comment'
+
 - if can? :manage, Post
   %button.pure-button.pure-button-secondary= link_to t('.edit'), edit_post_path, class: 'btn btn-info'
   %button.pure-button.pure-button-error= link_to t('.destroy'), post_path(@post), method: :delete, class: 'btn btn-danger'

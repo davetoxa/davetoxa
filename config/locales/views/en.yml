@@ -1,11 +1,15 @@
 en:
+  create: Add comment
   confirm: Are you shure ?
   controllers:
     subscribes:
       subscribe_successful: You have successfully subscribed
   comments:
+    form:
+      leave_comment: Leave a comment
     comment:
       ago: ago
+      delete: ' delete'
   devise:
     registrations:
       edit:
@@ -61,6 +65,7 @@ en:
     show:
       edit: Edit
       destroy: Destroy
+      leave_comment: Login and leave a comment
   psearch: Search by posts
   simple_form:
     error_notification:

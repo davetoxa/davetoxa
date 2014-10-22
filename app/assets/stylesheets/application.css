@@ -2,3 +2,9 @@
  *= require_self
  *= require_tree .
  */
+
+.area{
+  width: 430px;
+  height: 60px; 
+  border: 1px solid lightgrey;
+}
