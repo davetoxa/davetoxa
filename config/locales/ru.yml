@@ -1,3 +1,111 @@
 ru:
   unauthorized:
     default: Вам сюда нельзя!
+  admin:
+    main:
+      index:
+        title: Админ панель
+        users_link: Список пользователей
+        subscribes_link: Подписки на сайт
+    users:
+      index:
+        title: Список пользователей
+  create: Добавить
+  confirm: Вы уверены ?
+  controllers:
+    subscribes:
+      subscribe_successful: Вы успешно подписались
+  comments:
+    form:
+      leave_comment: Оставьте комментарий
+    comment:
+      ago: назад
+  devise:
+    registrations:
+      new:
+        title: Ничего тут нет =(
+    sessions:
+      new:
+        login: Войти
+  flash:
+    actions:
+      create:
+        notice: Вы успешно подписались
+  helpers:
+    submit:
+      post:
+        create: Добавить публикацию
+        update: Обновить публикацию
+      subscribe:
+        create: Подписаться на обновления
+      user:
+        create: Войти
+        update: Обновить свои данные
+  layouts:
+    application:
+      title: Rails - A Simple Approach
+    header:
+      description: Простая блогоплатформа на Ruby on Rails
+      login: Войти
+      plan: План
+      posts: Публикации
+      admin: Админка
+      title: Rails - A Simple Approach
+    plan:
+      questions: Вопросы?
+      title: План разработки
+  posts:
+    edit:
+      title: Обновление публикации
+    form:
+      destroy: Удалить публикацию
+    index:
+      new: Создать публикацию
+    new:
+      title: Создание публикации
+    post:
+      comments: Комментарии
+      update: Обновить
+    show:
+      edit: Редактировать
+      destroy: Удалить
+      leave_comment: Авторизуйся и оставь комментарий
+  psearch: Поиск по публикациям
+  profiles:
+    edit:
+      title: Редактирование профиля
+      destroy_account: Удалить мой аккаунт
+      exit: Выход
+  simple_form:
+    error_notification:
+      default_message: Что-то не так
+    labels:
+      subscribe:
+        email: Ваш email
+      user:
+        current_password: Для изменений введите второе секретное слово
+        edit:
+          info: Введите информацию о себе
+          name: Введите ваше имя
+        email: Секретное слово
+        password: Второе секретное слово
+      post:
+        content: Содержание
+        title: Заголовок публикации
+  search:
+    show:
+      found: На нижеследующих страницах вы можете найти искомую фразу
+      not_found: К сожалению ничего нет
+      title: Вы искали -
+  subscribes:
+    index:
+      subscribe: Подписаться
+      title: Подписчики
+    new:
+      wanna_update: Хотите подписаться на обновления ?
+  time:
+    formats:
+      short: "%d-%m-%Y в %k:%M"
+  will_paginate:
+    next_label: "Сюда &#8594;"
+    previous_label: "&#8592; Туда"

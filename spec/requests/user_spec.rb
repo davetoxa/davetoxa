@@ -13,8 +13,8 @@ describe 'User' do
     end
 
     it 'logout' do
-      visit edit_user_registration_path
-      click_link I18n.t("devise.registrations.edit.exit")
+      visit edit_profile_path
+      click_link I18n.t("profiles.edit.exit")
       expect(page).to have_content I18n.t("devise.sessions.signed_out")
     end
   end

@@ -54,5 +54,4 @@ Devise.setup do |config|
 
   # ==> Admins
   Rails.application.config.admins = Settings.admins
-
 end

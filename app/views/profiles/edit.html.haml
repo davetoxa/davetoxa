@@ -1,0 +1,6 @@
+%h2
+  = t '.title'
+= render 'form'
+
+%button.pure-button.pure-button-error= link_to t('.destroy_account'), registration_path(User), data: { confirm: t('confirm') }, method: :delete
+%button.pure-button.pure-button-warning= link_to t('.exit'), destroy_user_session_path, method: :delete

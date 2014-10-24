@@ -10,8 +10,13 @@ Davetoxa::Application.routes.draw do
   resources :posts do
     resources :comments, only: [:create, :destroy]
   end
-  resources :users, only: :index
-  resource :search, only: :show, controller: :search
 
-  get '/admin',   to: 'main#admin'
+  resource :profile, only: [:edit, :update]
+
+  resource :search, only: :show, controller: :search
+  
+  namespace :admin do
+    root 'main#index'
+    resources :users, only: :index
+  end
 end

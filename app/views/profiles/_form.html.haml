@@ -1,0 +1,5 @@
+= simple_form_for current_user, url: profile_path do |f|
+  = f.input :name
+  = f.input :info
+
+  %p= f.submit class: 'pure-button pure-button-success'
