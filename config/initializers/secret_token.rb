@@ -7,4 +7,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Davetoxa::Application.config.secret_key_base = Settings.secret_token
+Rails.application.config.secret_key_base = Settings.secret_token
