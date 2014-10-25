@@ -104,6 +104,9 @@ en:
   time:
     formats:
       short: "%d-%b-%Y %k:%M"
-  will_paginate:
-    next_label: "Here &#8594;"
-    previous_label: "&#8592; There"
+  views:
+    pagination:
+      next: "&#8594;"
+      previous: "&#8592;"
+      first:
+      last:

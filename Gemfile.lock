@@ -79,6 +79,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
     mail (2.6.1)
@@ -188,7 +191,6 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
-    will_paginate (3.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -207,6 +209,7 @@ DEPENDENCIES
   gemoji
   haml
   jquery-rails
+  kaminari
   launchy
   omniauth-github
   pg
@@ -220,4 +223,3 @@ DEPENDENCIES
   simple_form
   spring
   uglifier
-  will_paginate

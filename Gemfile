@@ -16,7 +16,7 @@ gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
-gem 'will_paginate'
+gem 'kaminari'
 
 group :development, :test do
   gem 'codeclimate-test-reporter', require: nil

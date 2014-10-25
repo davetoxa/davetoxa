@@ -2,6 +2,6 @@
 - @subscribes.each do |s|
   = s.email
   %hr
-= will_paginate @subscribes
+= paginate @subscribes
 %br
 %button.pure-button.pure-button-success= link_to t('.subscribe'), new_subscribe_path, class: 'btn btn-success btn'

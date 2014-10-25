@@ -106,6 +106,9 @@ ru:
   time:
     formats:
       short: "%d-%m-%Y в %k:%M"
-  will_paginate:
-    next_label: "Сюда &#8594;"
-    previous_label: "&#8592; Туда"
+  views:
+    pagination:
+      next: "&#8594;"
+      previous: "&#8592;"
+      first:
+      last:

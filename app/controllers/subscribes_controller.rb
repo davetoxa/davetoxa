@@ -5,7 +5,7 @@ class SubscribesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @subscribes = @subscribes.page(params[:page]).per_page(10)
+    @subscribes = @subscribes.page params[:page]
   end
 
   def new
