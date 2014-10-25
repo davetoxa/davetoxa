@@ -13,3 +13,11 @@
   color: green;
   font-size: 15pt;
 }
+
+input.error {
+  border-color: red !important;
+}
+
+textarea.error{
+  border-color: red !important;
+}

@@ -7,6 +7,7 @@ gem 'foreigner'
 gem 'gemoji'
 gem 'haml'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'omniauth-github'
 gem 'pg'
 gem 'puma'
@@ -16,7 +17,6 @@ gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
-gem 'kaminari'
 
 group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
