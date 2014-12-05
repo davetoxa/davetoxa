@@ -31,3 +31,10 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
+
+group :production do
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-puma'
+end

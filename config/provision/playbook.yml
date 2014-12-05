@@ -1,0 +1,147 @@
+---
+- hosts: 'all'
+  remote_user: 'root'
+
+  vars:
+    ruby_version: '2.1.5'
+    user: 'deploy'
+    home: '/home/{{ user }}'
+    rbenv_root: '{{ home }}/.rbenv'
+    name: 'davetoxa'
+    application: '{{ home }}/applications/{{ name }}'
+
+  tasks:
+    ### Install packages ###
+    - name: 'apt | update'
+      action: 'apt update_cache=yes'
+
+    - name: 'apt | install dependencies'
+      action: 'apt pkg={{ item }}'
+      with_items:
+        - 'build-essential'
+        - 'libssl-dev'
+        - 'libyaml-dev'
+        - 'libreadline6-dev'
+        - 'zlib1g-dev'
+        - 'libcurl4-openssl-dev'
+        - 'git'
+        - 'nginx'
+        - 'redis-server'
+        - 'postgresql'
+        - 'postgresql-contrib'
+        - 'libpq-dev'
+        - 'imagemagick'
+        - 'libmagickwand-dev'
+        - 'nodejs'
+        - 'htop'
+
+    ### Create an account with ssh keys ###
+    - name: 'account | create'
+      user: 'name={{ user }} shell=/bin/bash'
+
+    - name: 'account | copy authorized keys'
+      shell: 'mkdir -p {{ home }}/.ssh -m 700 && cp /root/.ssh/authorized_keys {{ home }}/.ssh && chown -R {{ user }}:{{ user }} {{ home }}/.ssh'
+
+    - name: 'account | copy ssh private key'
+      copy: 'src=keys/id_rsa dest={{ home }}/.ssh/id_rsa owner={{ user }} group={{ user }} mode=0600'
+
+    - name: 'account | copy ssh public key'
+      copy: 'src=keys/id_rsa.pub dest={{ home }}/.ssh/id_rsa.pub owner={{ user }} group={{ user }} mode=0644'
+
+    ### Install ruby ###
+    - name: 'rbenv | clone repo'
+      git: 'repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }} accept_hostkey=yes'
+
+    - name: 'rbenv | check ruby-build installed'
+      command: 'test -x {{ rbenv_root }}/plugins/ruby-build'
+      register: 'plugin_installed'
+      ignore_errors: yes
+
+    - name: 'rbenv | add bin to path'
+      shell: echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> {{ home }}/.bashrc
+      when: 'plugin_installed|failed'
+
+    - name: 'rbenv | init'
+      shell: echo 'eval "$(rbenv init -)"' >> {{ home }}/.bashrc
+      when: 'plugin_installed|failed'
+
+    - name: 'rbenv | clone ruby-build repo'
+      git: 'repo=git://github.com/sstephenson/ruby-build.git dest={{ rbenv_root }}/plugins/ruby-build accept_hostkey=yes'
+      when: 'plugin_installed|failed'
+
+    - name: 'rbenv | check ruby {{ ruby_version }} installed'
+      shell: 'RBENV_ROOT={{ rbenv_root }} PATH="$RBENV_ROOT/bin:$PATH" rbenv versions | grep {{ ruby_version }}'
+      register: 'ruby_installed'
+      ignore_errors: yes
+
+    - name: 'rbenv | install ruby {{ ruby_version }}'
+      shell: 'RBENV_ROOT={{ rbenv_root }} PATH="$RBENV_ROOT/bin:$PATH" rbenv install {{ ruby_version }}'
+      when: 'ruby_installed|failed'
+
+    - name: 'rbenv | set global ruby {{ ruby_version }}'
+      shell: 'RBENV_ROOT={{ rbenv_root }} PATH="$RBENV_ROOT/bin:$PATH" rbenv global {{ ruby_version }}'
+      when: 'ruby_installed|failed'
+
+    - name: 'rbenv | rehash'
+      shell: 'RBENV_ROOT={{ rbenv_root }} PATH="$RBENV_ROOT/bin:$PATH" rbenv rehash'
+      when: 'ruby_installed|failed'
+
+    - name: 'rbenv | create .gemrc'
+      lineinfile: 'dest={{ home }}/.gemrc owner={{ user }} group={{ user }} mode=0644 line="gem: --no-ri --no-rdoc" create=yes'
+      when: 'ruby_installed|failed'
+
+    - name: 'ruby | install bundler'
+      shell: 'RBENV_ROOT={{ rbenv_root }} PATH="$RBENV_ROOT/bin:$PATH" rbenv exec gem install bundler'
+      when: 'ruby_installed|failed'
+
+    - name: 'rbenv | change owner'
+      shell: 'chown -R {{ user }}:{{ user }} {{ rbenv_root }}'
+      when: 'ruby_installed|failed'
+
+    ### Manage database ###
+    - name: 'postgresql | check user'
+      shell: 'psql -U postgres -c "\copyright"'
+      register: 'postgres_login'
+      ignore_errors: yes
+
+    - name: 'postgresql | set auth type'
+      copy: 'src=configs/pg_hba.conf dest=/etc/postgresql/9.3/main/pg_hba.conf owner=postgres group=postgres mode=0644'
+      when: 'postgres_login|failed'
+
+    - name: 'postgresql | restart service'
+      service: name=postgresql state=restarted
+      when: 'postgres_login|failed'
+
+    - name: 'postgresql | create shared directory'
+      shell: 'mkdir -p {{ application }}/shared/config -m 775 && chown -R {{ user }}:{{ user }} {{ home }}/applications'
+      when: 'postgres_login|failed'
+
+    - name: 'postgresql | copy database.yml'
+      copy: 'src=configs/database.yml dest={{ application }}/shared/config/database.yml owner={{ user }} group={{ user }} mode=0644'
+      when: 'postgres_login|failed'
+
+    - name: 'postgresql | create database'
+      shell: 'createdb -U postgres -O postgres -E UTF8 -l en_US.UTF-8 {{ name }}_production'
+      when: 'postgres_login|failed'
+
+    # Rails setup
+    - name: 'rails | copy settings.yml'
+      copy: 'src=configs/settings.yml dest={{ application }}/shared/config/settings.yml owner={{ user }} group={{ user }} mode=0644'
+
+    ### Setup nginx ###
+    - name: 'nginx | check config'
+      command: 'test -f /etc/nginx/sites-enabled/{{ name }}.conf'
+      register: 'nginx_config_copied'
+      ignore_errors: yes
+
+    - name: 'nginx | remove default'
+      shell: 'rm /etc/nginx/sites-enabled/default'
+      when: 'nginx_config_copied|failed'
+
+    - name: 'nginx | copy config'
+      copy: 'src=configs/nginx.conf dest=/etc/nginx/sites-enabled/{{ name }}.conf owner=root group=root mode=0644'
+      when: 'nginx_config_copied|failed'
+
+    - name: 'nginx | restart service'
+      service: name=nginx state=restarted
+      when: 'nginx_config_copied|failed'

@@ -1,0 +1,6 @@
+secret_token: hey_token
+omniauth:
+  key: 35f4c43fc556b78a7428
+  secret: 068362dc1848f9a060b1384aa58d9e4749ff8410
+admins:
+  - davetoxa
