@@ -117,7 +117,7 @@
       when: 'postgres_login|failed'
 
     - name: 'postgresql | copy database.yml'
-      copy: 'src=configs/database.yml dest={{ application }}/shared/config/database.yml owner={{ user }} group={{ user }} mode=0644'
+      template: 'src=configs/database.yml dest={{ application }}/shared/config/database.yml owner={{ user }} group={{ user }} mode=0644'
       when: 'postgres_login|failed'
 
     - name: 'postgresql | create database'
@@ -134,12 +134,12 @@
       register: 'nginx_config_copied'
       ignore_errors: yes
 
-    - name: 'nginx | remove default'
-      shell: 'rm /etc/nginx/sites-enabled/default'
+    - name: 'nginx | createdir'
+      shell: 'rm /etc/nginx/sites-enabled/default; mkdir -p etc/nginx/sites-enabled/'
       when: 'nginx_config_copied|failed'
 
     - name: 'nginx | copy config'
-      copy: 'src=configs/nginx.conf dest=/etc/nginx/sites-enabled/{{ name }}.conf owner=root group=root mode=0644'
+      template: 'src=configs/nginx.conf dest=/etc/nginx/sites-enabled/{{ name }}.conf owner=root group=root mode=0644'
       when: 'nginx_config_copied|failed'
 
     - name: 'nginx | restart service'

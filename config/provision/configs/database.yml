@@ -3,4 +3,4 @@ production:
   username: postgres
   encoding: utf8
   pool: 8
-  database: davetoxa_production
+  database: {{ name }}_production

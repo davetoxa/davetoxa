@@ -1,8 +1,10 @@
-role :app, %w{deploy@178.62.254.62}
-role :web, %w{deploy@178.62.254.62}
-role :db,  %w{deploy@178.62.254.62}
+ip = '178.62.254.62'
 
-server '178.62.254.62', user: 'deploy', roles: %w{web app db}
+role :app, ["deploy@#{ip}"]
+role :web, ["deploy@#{ip}"]
+role :db,  ["deploy@#{ip}"]
+
+server ip, user: 'deploy', roles: %w{web app db}
 
 set :stage, 'production'
 set :rails_env, 'production'
