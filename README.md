@@ -1,8 +1,8 @@
 Rails - A Simple Approach
 ====
 
-[![Build Status](https://travis-ci.org/davetoxa/davetoxa.svg?branch=master)](https://travis-ci.org/davetoxa/davetoxa)
-[![Code Climate](https://codeclimate.com/github/davetoxa/davetoxa.png)](https://codeclimate.com/github/davetoxa/davetoxa)
+[![Build Status](https://travis-ci.org/davetoxa/davetoxa.svg)](https://travis-ci.org/davetoxa/davetoxa)
+[![Code Climate](https://codeclimate.com/github/davetoxa/davetoxa.svg)](https://codeclimate.com/github/davetoxa/davetoxa)
 
 ### This is a simple app for educational purposes :+1: :smiley:
 ## Setup
@@ -22,4 +22,4 @@ You could run app two different ways to work with GitHub autorization
 2. `http://localhost:3000`
 
 ## Other
-* Ruby on Rails 4.1
+* Ruby on Rails 4.2
