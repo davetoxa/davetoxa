@@ -1,6 +1,8 @@
 language: ruby
+
 rvm:
   - 2.1
+
 env:
   - DB=postgres
 
