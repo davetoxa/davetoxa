@@ -1,7 +1,6 @@
 ###
   = require jquery
   = require jquery_ujs
-  = require validate
   = require_tree .
 ###
 
