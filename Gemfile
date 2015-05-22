@@ -17,6 +17,7 @@ gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'react-rails'
 
 group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
