@@ -1,6 +1,9 @@
-.js-posts
-  = render @posts
-  = paginate @posts
+- if @posts.any?
+  .js-posts
+    = render @posts
+    = paginate @posts
+- else
+  %h1= 'Welcome, please login'
 
   - if can? :create, Post
     %button.pure-button.pure-button-secondary= link_to t('.new'), new_post_path

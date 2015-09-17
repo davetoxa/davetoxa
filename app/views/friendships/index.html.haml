@@ -1,0 +1,5 @@
+= render 'shared/user_menu'
+
+- @friendships.each do |f|
+  .friendship
+    %h3= link_to f.friend.full_name, profile_path(f.friend)

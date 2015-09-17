@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, dependent: :nullify
   has_many :comments, dependent: :destroy
+  has_many :friendships, dependent: :destroy
 
   def admin?
     username? && Rails.application.config.admins.include?(username)
@@ -16,6 +17,10 @@ class User < ActiveRecord::Base
       name: auth.info.name,
       uid: auth.uid
     )
+  end
+
+  def full_name
+    name || username
   end
 
   protected

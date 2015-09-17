@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @posts = @posts.order(created_at: :desc).page params[:page]
+    @posts = Post.where(user_id: user_ids).order(created_at: :desc).page params[:page]
   end
 
   def show
@@ -37,6 +37,10 @@ class PostsController < ApplicationController
 
   def load_post
     @post = Post.new(recourse_params)
+  end
+
+  def user_ids
+    current_user ? [current_user.id] | current_user.friendships.pluck(:friend_id) : []
   end
 
   def recourse_params

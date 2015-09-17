@@ -11,10 +11,14 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  resource :profile, only: [:edit, :update]
+  resources :profile, only: [:show, :edit, :update]
+
+  resources :friendships, only: [:index]
+  resources :users, only: :index
+  # get 'users' => 'friendships#users'
 
   resource :search, only: :show, controller: :search
-  
+
   namespace :admin do
     root 'main#index'
     resources :users, only: :index

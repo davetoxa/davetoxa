@@ -1,0 +1,6 @@
+%ul.pure-menu-list
+  - if can? :read, Friendship
+    %li.pure-menu-item
+      %h1= link_to 'My friends', friendships_path
+  %li.pure-menu-item
+    %h1= link_to 'All users', users_path

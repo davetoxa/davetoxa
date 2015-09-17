@@ -6,6 +6,9 @@
       = emojify(markdown post.content)
       .created_at
         = l post.created_at, format: :short
+        %br
+          = 'posted by'
+          = link_to post.user.full_name, profile_path(post.user)
       %p.post-meta
         -#%a.post-category.post-category-design{href: "#"} CSS
         -#%a.post-category.post-category-pure{href: "#"} Ruby

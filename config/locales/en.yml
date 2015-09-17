@@ -44,9 +44,9 @@ en:
         update: Update my profile
   layouts:
     application:
-      title: Rails - A Simple Approach | davetoxa.info
+      title: Rails - A Simple Approach
     header:
-      description: Simple blog platform on Ruby on Rails
+      description: Yet another social network
       login: Login
       plan: Plan
       posts: Posts
@@ -58,7 +58,7 @@ en:
     form:
       destroy: Destroy post
     index:
-      new: Create post
+      new: Add new post
     new:
       title: Creating post
     post:
@@ -68,12 +68,12 @@ en:
       edit: Edit
       destroy: Destroy
       leave_comment: Login and leave a comment
-  profiles:
+  profile:
     edit:
       title: Edit profile
       destroy_account: Delete profile
       exit: Exit
-  psearch: Search by posts
+  psearch: Search by users
   simple_form:
     error_notification:
       default_message: Something went wrong

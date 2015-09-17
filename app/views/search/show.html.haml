@@ -4,6 +4,5 @@
 - if @result.empty?
   %h2= t('.not_found')
 - else
-  %h2= t('.found')
   - @result.each do |result|
-    %p= link_to result.title, result
+    %p= link_to result.full_name, profile_path(result)

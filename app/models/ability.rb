@@ -11,9 +11,11 @@ class Ability
   def everybody_abilities
     can :create, Subscribe
     can :read, Post, state: %w{published approved}
+    can :read, User
   end
 
   def user_abilities
+    can :manage, Friendship, user_is: @user.id
     can :manage, Comment, user_id: @user.id
   end
 end
