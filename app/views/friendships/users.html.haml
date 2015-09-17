@@ -1,7 +1,0 @@
-= render 'shared/_user_menu'
-
-- @users.each do |f|
-  .user
-    %h2= link_to f.full_name, profile_path(f)
-
-= paginate @users

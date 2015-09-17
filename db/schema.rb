@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20150917142520) do
   create_table "friendships", force: :cascade do |t|
     t.integer "user_id"
     t.integer "friend_id"
-    t.boolean "approved"
-    t.boolean "blocked"
+    t.boolean "approved",  default: false
+    t.boolean "blocked",   default: false
   end
 
   create_table "posts", force: :cascade do |t|

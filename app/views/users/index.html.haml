@@ -1,7 +1,17 @@
 = render 'shared/user_menu'
 
-- @users.each do |f|
+- @users.each do |u|
   .user
-    %h2= link_to f.full_name, profile_path(f)
-
+    %h4
+      = link_to u.full_name, profile_path(u)
+      - if current_user
+        - if current_user.mine_friend?(u)
+          .pure-button.pure-button-primary
+            = link_to 'Remove from friends', friendship_path(u), method: :delete
+        - elsif current_user.invited?(u)
+          .pure-button.pure-button-primary
+            = 'Request sended'
+        - elsif current_user != u
+          .pure-button.button-success
+            = link_to 'Add to friend', invite_friendship_path(u), method: :put
 = paginate @users

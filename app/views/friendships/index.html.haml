@@ -2,4 +2,13 @@
 
 - @friendships.each do |f|
   .friendship
-    %h3= link_to f.friend.full_name, profile_path(f.friend)
+    - user = f.friend == current_user ? f.user : f.friend
+    %h3= link_to user.full_name, profile_path(user)
+
+- @pendings.each do |f|
+  .pending
+    %h3
+      = "Invite from #{f.user.full_name}"
+      = link_to "Accept", accept_friendship_path(f.user), method: :put
+      = ' / '
+      = link_to "Reject", reject_friendship_path(f.user), method: :delete

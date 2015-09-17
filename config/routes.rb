@@ -13,7 +13,13 @@ Rails.application.routes.draw do
 
   resources :profile, only: [:show, :edit, :update]
 
-  resources :friendships, only: [:index]
+  resources :friendships, only: [:index, :destroy] do
+    member do
+     put 'invite'
+     put 'accept'
+     delete 'reject'
+   end
+  end
   resources :users, only: :index
   # get 'users' => 'friendships#users'
 

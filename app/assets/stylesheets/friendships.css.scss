@@ -6,3 +6,10 @@ li.pure-menu-item {
   display: inline-block;
   margin-right: 25px;
 }
+
+.pending {
+  border-bottom: 1px dotted green;
+  a {
+    color: green;
+  }
+}

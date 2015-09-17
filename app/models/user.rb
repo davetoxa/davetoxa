@@ -23,6 +23,18 @@ class User < ActiveRecord::Base
     name || username
   end
 
+  def mine_friend?(user)
+    if user
+      friendships.accepted.map(&:friend_id).include?(user.id) || user.friendships.accepted.map(&:friend_id).include?(id)
+    else
+      false
+    end
+  end
+
+  def invited?(user)
+    user ? friendships.invited.map(&:friend_id).include?(user.id) : false
+  end
+
   protected
   # This two methods were overwritten for devise compability
 
