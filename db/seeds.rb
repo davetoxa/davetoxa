@@ -1,3 +1,5 @@
-5.times do
-  User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: SecureRandom.hex(5), uid: rand(10000))
-end
+User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: 'Bart simpson', uid: rand(10000))
+User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: 'Lisa simpson', uid: rand(10000))
+User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: 'Aaron', uid: rand(10000))
+User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: 'DHH', uid: rand(10000))
+User.create(email: "#{SecureRandom.hex(5)}@gmail.com", username: 'Koichi Sasada', uid: rand(10000))
