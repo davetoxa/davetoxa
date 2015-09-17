@@ -1,5 +1,5 @@
 .friendship {
-  border-bottom: 1px dotted lightgrey;
+  border-bottom: 1px dotted #d3d3d3;
 }
 
 li.pure-menu-item {
@@ -8,8 +8,9 @@ li.pure-menu-item {
 }
 
 .pending {
-  border-bottom: 1px dotted green;
+  border-bottom: 1px dotted #008000;
+
   a {
-    color: green;
+    color: #008000;
   }
 }

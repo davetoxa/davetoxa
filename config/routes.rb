@@ -15,14 +15,13 @@ Rails.application.routes.draw do
 
   resources :friendships, only: [:index, :destroy] do
     member do
-     put 'invite'
-     put 'accept'
-     delete 'reject'
+      put 'invite'
+      put 'accept'
+      delete 'reject'
    end
   end
-  resources :users, only: :index
-  # get 'users' => 'friendships#users'
 
+  resources :users, only: :index
   resource :search, only: :show, controller: :search
 
   namespace :admin do
