@@ -16,6 +16,6 @@
 config/settings.local.yml
 config/settings/*.local.yml
 config/provision/keys/id_rsa
-
+config/settings.yml
 
 .DS_Store
