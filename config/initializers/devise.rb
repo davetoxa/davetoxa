@@ -50,7 +50,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   # ==> OmniAuth
-  config.omniauth :github, Settings.omniauth.key, Settings.omniauth.secret
+  config.omniauth :github, ENV['omniauth_key'], ENV['omniauth_secret']
 
   # ==> Admins
   Rails.application.config.admins = Settings.admins
