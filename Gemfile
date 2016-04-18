@@ -36,4 +36,5 @@ group :production do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
+  gem 'rails_12factor'
 end
