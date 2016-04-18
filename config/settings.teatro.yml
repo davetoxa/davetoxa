@@ -1,6 +1,0 @@
-secret_token: hey_token
-omniauth:
-  key: 'ef75fbca379fe85e32ee'
-  secret: '01119cd77da239b138ffc579bac7e51c4f43cfda'
-admins:
-  - davetoxa
