@@ -23,5 +23,5 @@
             = form_tag search_path, method: :get do
               = text_field_tag :search, params[:search], placeholder: t('psearch'), class: 'search-query'
         %li.nav-item{style: 'margin-top: 10px'}
-          = link_to (image_tag 'https://travis-ci.org/davetoxa/davetoxa.png?branch=master'), 'https://github.com/davetoxa/davetoxa'
-          = link_to (image_tag 'https://codeclimate.com/github/davetoxa/davetoxa.png'), 'https://codeclimate.com/github/davetoxa/davetoxa'
+          = link_to (image_tag 'https://travis-ci.org/davetoxa/davetoxa.svg?branch=master'), 'https://travis-ci.org/davetoxa/davetoxa'
+          = link_to (image_tag 'https://codeclimate.com/github/davetoxa/davetoxa/badges/gpa.svg'), 'https://codeclimate.com/github/davetoxa/davetoxa'
