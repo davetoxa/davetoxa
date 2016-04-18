@@ -11,7 +11,7 @@ Rails - A Simple Approach
 * `bundle install`
 * `cp config/database.yml.example config/database.yml` and configure
 * `rake db:setup`
-* add your github nickname to settings.yml (for admin feature)
+* add your github nickname to secrets.yml (for admin feature)
 
 ## Github Authorization
 

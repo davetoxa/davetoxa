@@ -1,0 +1,19 @@
+setup: &setup
+  adapter: postgresql
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password:
+  encoding: unicode
+  min_messages: WARNING
+
+development:
+  <<: *setup
+  database: <%= ENV['DATABASE_DEV_NAME'] %>
+
+production:
+  <<: *setup
+  database: <%= ENV['DATABASE_PRODUCTION_NAME'] %>
+
+test:
+  <<: *setup
+  database: <%= ENV['DATABASE_TEST_NAME'] %>

@@ -124,10 +124,6 @@
       shell: 'createdb -U postgres -O postgres -E UTF8 -l en_US.UTF-8 {{ name }}_production'
       when: 'postgres_login|failed'
 
-    # Rails setup
-    - name: 'rails | copy settings.yml'
-      copy: 'src=configs/settings.yml dest={{ application }}/shared/config/settings.yml owner={{ user }} group={{ user }} mode=0644'
-
     ### Setup nginx ###
     - name: 'nginx | check config'
       command: 'test -f /etc/nginx/sites-enabled/{{ name }}.conf'

@@ -11,7 +11,7 @@ set :branch, 'master'
 set :deploy_to, '/home/deploy/applications/davetoxa'
 
 set :log_level, :info
-set :linked_files, %w{config/database.yml config/settings.yml}
+set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
 set :rbenv_type, :user

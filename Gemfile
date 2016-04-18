@@ -11,7 +11,6 @@ gem 'omniauth-github'
 gem 'pg'
 gem 'puma'
 gem 'rails', '~>  4.2.0'
-gem 'rails_config'
 gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
@@ -21,6 +20,7 @@ group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
   gem 'quiet_assets'
   gem 'spring'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -36,5 +36,4 @@ group :production do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
-  gem 'unicorn' # For test purpose | Setuping AWS Opsworks stack
 end
