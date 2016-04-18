@@ -9,17 +9,12 @@ Rails - A Simple Approach
 
 * `git clone git@github.com:davetoxa/davetoxa.git`
 * `bundle install`
-* `cp config/database.yml.example config/database.yml` and configure
+* `cp .env.example .env` and configure
 * `rake db:setup`
-* add your github nickname to secrets.yml (for admin feature)
+* add your github nickname to `secrets.yml` (for admin feature)
+* setup github application for auth
 
-## Github Authorization
-
-You could run app two different ways to work with GitHub autorization
-
-1. `http://davetoxa.dev/` on the `:80` port
-
-2. `http://localhost:3000`
-
-## Other
+## Tech
 * Ruby on Rails 4.2
+* Ruby 2.2
+* Ansible for provisioning
