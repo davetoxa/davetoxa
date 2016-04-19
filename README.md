@@ -1,8 +1,9 @@
 Rails - A Simple Approach
 ====
 
-[![Build Status](https://travis-ci.org/davetoxa/friends.svg)](https://travis-ci.org/davetoxa/friends)
-[![Code Climate](https://codeclimate.com/github/davetoxa/friends/badges/gpa.svg)](https://codeclimate.com/github/davetoxa/friends)
+[![Build Status](https://travis-ci.org/davetoxa/davetoxa.svg?branch=master)](https://travis-ci.org/davetoxa/davetoxa)
+[![Code Climate](https://codeclimate.com/github/davetoxa/davetoxa/badges/gpa.svg)](https://codeclimate.com/github/davetoxa/davetoxa)
+[![Test Coverage](https://codeclimate.com/github/davetoxa/davetoxa/badges/coverage.svg)](https://codeclimate.com/github/davetoxa/davetoxa/coverage)
 
 ### This is a simple app for educational purposes :+1: :smiley:
 ## Setup
