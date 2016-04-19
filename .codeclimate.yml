@@ -20,6 +20,9 @@ engines:
     enabled: true
   rubocop:
     enabled: true
+    checks:
+      Rubocop/Lint/HandleExceptions:
+        enabled: false
 ratings:
   paths:
   - Gemfile.lock
