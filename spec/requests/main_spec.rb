@@ -24,7 +24,7 @@ describe 'Main' do
 
     before(:each) do
       auth user
-      visit admin_root_path
+      visit admin_users_path
     end
 
     it 'show accesss denied for usual user' do

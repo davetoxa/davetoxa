@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails', '~> 5.0.0'
+
 gem 'cancancan'
 gem 'coffee-rails'
 gem 'devise'
@@ -10,7 +12,6 @@ gem 'kaminari'
 gem 'omniauth-github'
 gem 'pg'
 gem 'puma'
-gem 'rails', '~>  4.2.0'
 gem 'redcarpet'
 gem 'sass-rails'
 gem 'simple_form'
@@ -18,7 +19,6 @@ gem 'uglifier'
 
 group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
-  gem 'quiet_assets'
   gem 'spring'
   gem 'dotenv-rails'
 end

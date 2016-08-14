@@ -7,5 +7,5 @@ def auth(user)
       name: user.name
     }
   })
-  visit user_omniauth_authorize_path(:github)
+  visit user_github_omniauth_authorize_path
 end
