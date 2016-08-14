@@ -16,6 +16,6 @@ Rails - A Simple Approach
 * setup github application for auth
 
 ## Tech
-* Ruby on Rails 4.2
+* Ruby on Rails 5
 * Ruby 2.2
 * Ansible for provisioning
