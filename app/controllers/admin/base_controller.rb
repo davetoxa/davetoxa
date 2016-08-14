@@ -6,7 +6,7 @@ class Admin::BaseController < ApplicationController
   end
 
   private
-  
+
   def check!
     redirect_to root_url, alert: 'Access denied' unless current_user && current_user.admin?
   end

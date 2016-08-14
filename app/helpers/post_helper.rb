@@ -9,7 +9,7 @@ module PostHelper
     end.html_safe if content.present?
   end
 
-  def emoji_path img
+  def emoji_path(img)
     "http://www.emoji-cheat-sheet.com/graphics/emojis/#{img}.png"
   end
 end
