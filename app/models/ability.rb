@@ -10,7 +10,7 @@ class Ability
 
   def everybody_abilities
     can :create, Subscribe
-    can :read, Post, state: %w{published approved}
+    can :read, Post, state: %w(published approved)
   end
 
   def user_abilities

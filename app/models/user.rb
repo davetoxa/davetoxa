@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   end
 
   protected
+  
   # This two methods were overwritten for devise compability
 
   def encrypted_password

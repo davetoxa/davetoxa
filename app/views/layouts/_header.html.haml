@@ -10,9 +10,9 @@
         %li.nav-item
           %a.pure-button
             - if can? :manage, :all
-              = link_to t('.admin'), admin_root_path
+              = link_to t('.admin'), admin_users_path
             - unless user_signed_in?
-              =link_to t('.login'), user_omniauth_authorize_path(:github)
+              = link_to t('.login'), user_github_omniauth_authorize_path
         %li.nav-item
           - if user_signed_in?
             .user-link

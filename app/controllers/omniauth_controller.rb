@@ -5,6 +5,7 @@ class OmniauthController < Devise::OmniauthCallbacksController
   end
 
   protected
+  
   def auth_hash
     request.env['omniauth.auth']
   end

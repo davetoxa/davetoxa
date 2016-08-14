@@ -3,7 +3,7 @@
 #   $ bundle exec cap production deploy
 #   $ bundle exec cap production rake task=db:seed
 
-lock '3.4.1'
+lock '3.6.0'
 
 set :application, 'davetoxa'
 set :repo_url, 'git@github.com:davetoxa/davetoxa.git'
