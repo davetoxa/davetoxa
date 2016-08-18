@@ -2,7 +2,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = 'd39fe3f9ed08e129479fc10ebd508662ab13fd9404c6e36471dd3dc53b5b76886ff28e528a632d7f7cb2a51bb604acec16b5530f102bcb2b0111616e981f77ce'
+  config.secret_key = ENV['SECRET_TOKEN']
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -45,12 +45,11 @@ Devise.setup do |config|
   # a value less than 10 in other environments.
   config.stretches = Rails.env.test? ? 1 : 10
 
-
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
 
   # ==> OmniAuth
-  config.omniauth :github, '0eb1d7ae24f9fe48af07', '4e4d249eaca661b9c8a35e834bbd85bc2af8f29c'
+  config.omniauth :github, ENV['OMNIAUTH_KEY'], ENV['OMNIAUTH_SECRET']
 
   # ==> Admins
   Rails.application.config.admins = Rails.application.secrets.admins

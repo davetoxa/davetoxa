@@ -16,7 +16,7 @@ module Davetoxa
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.time_zone = 'Ekaterinburg' # +0600
+    config.time_zone = 'Moscow' # UTC+03:00
 
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.enforce_available_locales = true
