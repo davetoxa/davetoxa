@@ -6,6 +6,11 @@ Rails - A Simple Approach
 [![Test Coverage](https://codeclimate.com/github/davetoxa/davetoxa/badges/coverage.svg)](https://codeclimate.com/github/davetoxa/davetoxa/coverage)
 
 ### This is a simple app for educational purposes :+1: :smiley:
+* Simple blog platform with comments
+* Github auth
+* Search
+* Subscribtions
+
 ## Setup
 
 * `git clone git@github.com:davetoxa/davetoxa.git`
