@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0'
 
 gem 'cancancan'
-gem 'coffee-rails'
 gem 'devise'
 gem 'gemoji'
 gem 'haml'
@@ -21,6 +20,7 @@ group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
   gem 'spring'
   gem 'dotenv-rails'
+  gem 'listen', '~> 3.0.5'
 end
 
 group :test do
