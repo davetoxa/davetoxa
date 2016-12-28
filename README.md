@@ -22,5 +22,5 @@ Rails - A Simple Approach
 
 ## Tech
 * Ruby on Rails 5
-* Ruby 2.2
+* Ruby 2.4
 * Ansible for provisioning

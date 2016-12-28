@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -16,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140108113555) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "post_id"
     t.string   "body",       null: false
@@ -24,42 +23,39 @@ ActiveRecord::Schema.define(version: 20140108113555) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title",                            null: false
     t.text     "content",                          null: false
     t.string   "state",      default: "published", null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
-
-  create_table "posts_tags", id: false, force: true do |t|
+  create_table "posts_tags", id: false, force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "tag_id",  null: false
+    t.index ["post_id"], name: "index_posts_tags_on_post_id"
+    t.index ["tag_id", "post_id"], name: "index_posts_tags_on_tag_id_and_post_id", unique: true
+    t.index ["tag_id"], name: "index_posts_tags_on_tag_id"
   end
 
-  add_index "posts_tags", ["post_id"], name: "index_posts_tags_on_post_id", using: :btree
-  add_index "posts_tags", ["tag_id", "post_id"], name: "index_posts_tags_on_tag_id_and_post_id", unique: true, using: :btree
-  add_index "posts_tags", ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
-
-  create_table "subscribes", force: true do |t|
+  create_table "subscribes", force: :cascade do |t|
     t.string   "email",                     null: false
     t.boolean  "active",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "index_subscribes_on_email"
   end
 
-  add_index "subscribes", ["email"], name: "index_subscribes_on_email", using: :btree
-
-  create_table "tags", force: true do |t|
+  create_table "tags", force: :cascade do |t|
     t.string   "title",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",      null: false
     t.string   "username",   null: false
     t.string   "name"
@@ -67,15 +63,9 @@ ActiveRecord::Schema.define(version: 20140108113555) do
     t.string   "uid",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["uid"], name: "index_users_on_uid", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
-
-  add_foreign_key "comments", "posts", name: "comments_post_id_fk"
-  add_foreign_key "comments", "users", name: "comments_user_id_fk"
-
-  add_foreign_key "posts", "users", name: "posts_user_id_fk"
 
 end
