@@ -1,14 +1,18 @@
 ---
 - hosts: 'all'
   remote_user: 'root'
+  gather_facts: no
+  pre_tasks:
+  - name: 'install python2'
+    raw: sudo apt-get -y install python-simplejson
 
   vars:
-    ruby_version: '2.4.0'
+    ruby_version: '2.4.2'
     user: 'deploy'
     home: '/home/{{ user }}'
     rbenv_root: '{{ home }}/.rbenv'
-    name: 'davetoxa'
-    application: '{{ home }}/applications/{{ name }}'
+    app_name: 'davetoxa'
+    application: '{{ home }}/applications/{{ app_name }}'
 
   tasks:
     ### Install packages ###
@@ -105,7 +109,7 @@
       ignore_errors: yes
 
     - name: 'postgresql | set auth type'
-      copy: 'src=configs/pg_hba.conf dest=/etc/postgresql/9.3/main/pg_hba.conf owner=postgres group=postgres mode=0644'
+      copy: 'src=configs/pg_hba.conf dest=/etc/postgresql/9.5/main/pg_hba.conf owner=postgres group=postgres mode=0644'
       when: 'postgres_login|failed'
 
     - name: 'postgresql | restart service'
@@ -121,12 +125,12 @@
       when: 'postgres_login|failed'
 
     - name: 'postgresql | create database'
-      shell: 'createdb -U postgres -O postgres -E UTF8 -l en_US.UTF-8 {{ name }}_production'
+      shell: 'createdb -U postgres -O postgres -E UTF8 -l en_US.UTF-8 {{ app_name }}_production'
       when: 'postgres_login|failed'
 
     ### Setup nginx ###
     - name: 'nginx | check config'
-      command: 'test -f /etc/nginx/sites-enabled/{{ name }}.conf'
+      command: 'test -f /etc/nginx/sites-enabled/{{ app_name }}.conf'
       register: 'nginx_config_copied'
       ignore_errors: yes
 
@@ -135,7 +139,7 @@
       when: 'nginx_config_copied|failed'
 
     - name: 'nginx | copy config'
-      template: 'src=configs/nginx.conf dest=/etc/nginx/sites-enabled/{{ name }}.conf owner=root group=root mode=0644'
+      template: 'src=configs/nginx.conf dest=/etc/nginx/sites-enabled/{{ app_name }}.conf owner=root group=root mode=0644'
       when: 'nginx_config_copied|failed'
 
     - name: 'nginx | restart service'

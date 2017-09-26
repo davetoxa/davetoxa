@@ -3,4 +3,4 @@ production:
   username: postgres
   encoding: utf8
   pool: 8
-  database: {{ name }}_production
+  database: {{ app_name }}_production
