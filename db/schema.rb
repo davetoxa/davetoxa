@@ -30,15 +30,15 @@ ActiveRecord::Schema.define(version: 20140108113555) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "posts_tags", id: false, force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "tag_id",  null: false
-    t.index ["post_id"], name: "index_posts_tags_on_post_id"
-    t.index ["tag_id", "post_id"], name: "index_posts_tags_on_tag_id_and_post_id", unique: true
-    t.index ["tag_id"], name: "index_posts_tags_on_tag_id"
+    t.index ["post_id"], name: "index_posts_tags_on_post_id", using: :btree
+    t.index ["tag_id", "post_id"], name: "index_posts_tags_on_tag_id_and_post_id", unique: true, using: :btree
+    t.index ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
   end
 
   create_table "subscribes", force: :cascade do |t|
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140108113555) do
     t.boolean  "active",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["email"], name: "index_subscribes_on_email"
+    t.index ["email"], name: "index_subscribes_on_email", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -63,9 +63,12 @@ ActiveRecord::Schema.define(version: 20140108113555) do
     t.string   "uid",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["uid"], name: "index_users_on_uid", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["uid"], name: "index_users_on_uid", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
+  add_foreign_key "posts", "users"
 end
