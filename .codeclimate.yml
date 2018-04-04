@@ -6,39 +6,23 @@ engines:
     enabled: true
   csslint:
     enabled: true
-  coffeelint:
-    enabled: true
   duplication:
     enabled: true
     config:
       languages:
       - ruby
       - javascript
-      - python
-      - php
   fixme:
     enabled: true
   rubocop:
     enabled: true
-    checks:
-      Rubocop/Lint/HandleExceptions:
-        enabled: false
 ratings:
   paths:
   - Gemfile.lock
   - "**.erb"
   - "**.haml"
   - "**.rb"
-  - "**.rhtml"
-  - "**.slim"
-  - "**.css"
-  - "**.coffee"
-  - "**.inc"
   - "**.js"
-  - "**.jsx"
-  - "**.module"
-  - "**.php"
-  - "**.py"
 exclude_paths:
 - config/
 - db/
